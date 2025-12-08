@@ -1,5 +1,5 @@
 ---
-title: "Ancient Language Processing (ALP 2025)"
+title: "Ancient Language Processing (ALP 2026)"
 image: EnumaElish_vectorSpace.png
 about: 
   template: marquee
@@ -31,8 +31,6 @@ Students will discuss and contrast the shared epigraphical challenges in ancient
 
 # Instructors
 
-+-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
-| [Shai Gordin](https://digitalpasts.github.io/){target="_blank"} (Ariel Uni./Open Uni. IL) | [Eliese-Sophia Lincke](https://www.geschkult.fu-berlin.de/e/aegyptologie/personen/Professorinnen-und-Professoren/Lincke/index.html){target="_blank"} (FU Berlin) | [Hubert Mara](https://www.ada.fu-berlin.de/en/dh-fu/Personen/Mara_EN/index.html){target="_blank"} (FU Berlin) |
-|                                                                                           |                                                                                                                                                                  |                                                                                                               |
-| Email: shaigo\@ariel.ac.il                                                                | Email: e.lincke\@fu-berlin.de                                                                                                                                    | Email: hubert.mara\@fu-berlin.de                                                                              |
-+-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+| [Shai Gordin](https://digitalpasts.github.io/){target="_blank"} (Ariel Uni./Open Uni. IL) | [Eliese-Sophia Lincke](https://www.geschkult.fu-berlin.de/e/aegyptologie/personen/Professorinnen-und-Professoren/Lincke/index.html){target="_blank"} (FU Berlin) |
+|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Email: shaigo@ariel.ac.il                                                                 | Email: e.lincke@fu-berlin.de                                                                                                                                     |

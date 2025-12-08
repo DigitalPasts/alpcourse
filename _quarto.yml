@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Ancient Language Processing / Gordin, Lincke, and Mara"
+  title: "Ancient Language Processing / Gordin and Lincke"
   open-graph: true
   reader-mode: true
   navbar:
@@ -28,7 +28,7 @@ website:
         
   page-footer:
     background: light
-    center: "© Digital Pasts Lab, 2025"
+    center: "© Digital Pasts Lab, 2026"
     left: 
       - icon: github
         href: https://github.com/DigitalPasts

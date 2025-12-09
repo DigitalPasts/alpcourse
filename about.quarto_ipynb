@@ -1,0 +1,284 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "d6fd4154",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "title: \"Schedule\"\n",
+    "execute:\n",
+    "  echo: false\n",
+    "---"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "a4b53b68",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<h2>Unit 1: What is Ancient Language Processing?</h2>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<table border=\"1\" class=\"dataframe schedule-table\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th>Date</th>\n",
+       "      <th>Topic</th>\n",
+       "      <th>Assignment</th>\n",
+       "      <th>Materials</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <td>15/04/2026</td>\n",
+       "      <td>Brushing-up on your Python</td>\n",
+       "      <td><p><strong>Choose one ancient language dataset</strong>: familiarize yourself with the data model, consider how this data model fits with the datasets presented in class. Remodel your data accordingly. Do not forget collecting metadata as defined in the class examples.</p></td>\n",
+       "      <td><p>Tutorials: - <a href=\"https://www.simplilearn.com/tutorials/python-tutorial/python-functions\">How to define a function</a> | - <a href=\"https://www.programiz.com/python-programming/list-comprehension\">List comprehensions</a> | - <a href=\"https://niekveldhuis.github.io/sumnet/PartI-ExtractLemmatizationfromJSON.html\">Load, parse and extract data from ORACC json files</a> | - <a href=\"https://regex101.com\">RegEx101.com</a></p></td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>22/04/2026</td>\n",
+       "      <td>No Class (Independence Day)</td>\n",
+       "      <td></td>\n",
+       "      <td></td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>29/04/2026</td>\n",
+       "      <td>Doing Computational Philology: the (ideal) pipeline</td>\n",
+       "      <td><p><strong>Explore your dataset</strong>: upload the data into Voyant (or similar programs) or into an LLM and describe it based on distant reading techniques (i.e. quantification). Following this analysis decide where close reading would be necessary.</p></td>\n",
+       "      <td><p>Reading: <a href=\"https://drive.google.com/file/d/1ZBWdgYdPBodSTIMVyBkv96Tpq4IhKeT-/view?usp=sharing\">Rockwell &amp; Sinclair (2016)</a> | <a href=\"https://doi.org/10.1162/coli_a_00481\">Sommerschield et al. (2023)</a> | Tools: - Voyant Tools; - AntConc; - LLM (ChatGPT, Claude, Olmoe etc.)</p></td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<h2>Unit 2: Digitization and Annotation</h2>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<table border=\"1\" class=\"dataframe schedule-table\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th>Date</th>\n",
+       "      <th>Topic</th>\n",
+       "      <th>Assignment</th>\n",
+       "      <th>Materials</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <td>06/05/2026</td>\n",
+       "      <td>Pipeline I: Optical / Handwritten Character Recognition</td>\n",
+       "      <td></td>\n",
+       "      <td><p><a href=\"https://aclanthology.org/2024.ml4al-1.14/\">Gordin, Alper et al. (2024)</a> | <a href=\"https://www.geschkult.fu-berlin.de/e/aegyptologie/personen/Professorinnen-und-Professoren/Lincke/Lincke_2021_OCR-Coptic.pdf\">Lincke (2021)</a> | <a href=\"https://digitalorientalist.com/2022/11/15/escriptorium-digital-text-production-for-urdu-hindi-and-bengali-print-part-1/\">Chauhan's blogpost (2022)</a></p></td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>13/05/2026</td>\n",
+       "      <td>Pipeline II: Annotation (Lemmatization, PoS-Tagging, Treebanking)</td>\n",
+       "      <td></td>\n",
+       "      <td><p><a href=\"https://doi.org/10.1093/llc/fqae002\">Ong &amp; Gordin (2024)</a> | <a href=\"https://doi.org/10.18653/v1/2024.ml4al-1.10\">Sahala &amp; Lincke (2024)</a> | <a href=\"https://aclanthology.org/2025.alp-1.17/\">Farsi et al. (2025)</a></p></td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<h2>Unit 3: Operationalization and the Vector Space</h2>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<table border=\"1\" class=\"dataframe schedule-table\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th>Date</th>\n",
+       "      <th>Topic</th>\n",
+       "      <th>Assignment</th>\n",
+       "      <th>Materials</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <td>20/05/2026</td>\n",
+       "      <td>Pipeline III: Operationalization of words I - the vector space</td>\n",
+       "      <td></td>\n",
+       "      <td><p>Tutorials: - <a href=\"https://playground.tensorflow.org/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,2&amp;seed=0.83462&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=false&amp;xSquared=false&amp;ySquared=false&amp;cosX=false&amp;sinX=false&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false\">Playing with Neural Networks</a>; Reading: <a href=\"https://aclanthology.org/2025.alp-1.30/\">Riemenschneider (2025)</a> | <a href=\"https://aclanthology.org/2025.alp-1.33/\">Gordin et al. (2025)</a></p></td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>27/05/2026</td>\n",
+       "      <td>Pipeline IV: Operationalization of words II - Measuring distances</td>\n",
+       "      <td><p><strong>Process your data and measure distances</strong>: Data model using cuneiform data from ORACC with metadata can be found in the ALP 2024 course repository</p></td>\n",
+       "      <td><p>Tutorials: - <a href=\"https://www.codingthepast.com/2023/04/26/Text-Mining-in-Python\">Coding the past: understand TF-IDF in python</a> | - <a href=\"https://programminghistorian.org/en/lessons/analyzing-documents-with-tfidf\">Programming Historian: analyzing documents with TF-IDF</a> | - <a href=\"https://www.humanitiesdataanalysis.org/vector-space-model/notebook.html\">Karsdorp, Kestemont, &amp; Riddell 2021</a> | Reading: <a href=\"https://doi.org/10.22148/001c.11830\">Gavin (2020)</a> | <a href=\"https://aclanthology.org/2023.alp-1.22.pdf\">Bennett &amp; Sahala (2023)</a> | <a href=\"https://www.degruyterbrill.com/document/doi/10.1515/9783110761665-030/html\">Schweitzer (2023)</a> | <a href=\"https://web.stanford.edu/~jurafsky/slp3/6.pdf\">Jurafsky &amp; Martin (2024)</a></p></td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>03/06/2026</td>\n",
+       "      <td>Pipeline V: Operationalization of words III - Word vectors</td>\n",
+       "      <td></td>\n",
+       "      <td></td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<h2>Unit 4: Network Analysis and Visualization</h2>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/html": [
+       "<table border=\"1\" class=\"dataframe schedule-table\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th>Date</th>\n",
+       "      <th>Topic</th>\n",
+       "      <th>Assignment</th>\n",
+       "      <th>Materials</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <td>10/06/2026</td>\n",
+       "      <td>Pipeline VI: Visualization I - Graph theory</td>\n",
+       "      <td></td>\n",
+       "      <td></td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>17/06/2026</td>\n",
+       "      <td>Pipeline VII: Visualization II - Network metrics</td>\n",
+       "      <td></td>\n",
+       "      <td></td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>24/06/2026</td>\n",
+       "      <td>Presentation of class projects and feedback</td>\n",
+       "      <td></td>\n",
+       "      <td></td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <td>01/07/2026</td>\n",
+       "      <td>Presentation of class projects and feedback</td>\n",
+       "      <td></td>\n",
+       "      <td></td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>"
+      ],
+      "text/plain": [
+       "<IPython.core.display.HTML object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import markdown\n",
+    "from IPython.display import HTML, display\n",
+    "\n",
+    "# Read the schedule CSV (path relative to the project root)\n",
+    "df = pd.read_csv('data/schedule.csv')\n",
+    "\n",
+    "def md_to_html(text):\n",
+    "    if pd.isna(text) or str(text).strip() == '':\n",
+    "        return ''\n",
+    "    # convert markdown to HTML (extensions=['extra'] supports lists/tables)\n",
+    "    return markdown.markdown(str(text), extensions=['extra'])\n",
+    "\n",
+    "# Convert Markdown in these columns to HTML so the HTML is rendered in Quarto\n",
+    "for col in ['Assignment', 'Materials']:\n",
+    "    if col in df.columns:\n",
+    "        df[col] = df[col].fillna('').apply(md_to_html)\n",
+    "\n",
+    "# Render one table per Unit\n",
+    "for unit in df['Unit'].unique():\n",
+    "    display(HTML(f\"<h2>{unit}</h2>\"))\n",
+    "    sub = df[df['Unit'] == unit][['Date','Topic','Assignment','Materials']]\n",
+    "    html = sub.to_html(index=False, escape=False, classes='schedule-table')\n",
+    "    display(HTML(html))"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3",
+   "path": "/Users/shaigordin/Dropbox/Git-courses/alpcourse/.venv/share/jupyter/kernels/python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

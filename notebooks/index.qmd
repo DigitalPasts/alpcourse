@@ -1,3 +1,37 @@
 ---
-title: "Notebooks"
+title: "How to run notebooks?"
 ---
+
+## Start here (no coding setup needed)
+
+In this course, we use **Jupyter notebooks**: interactive pages where text, code, and results appear together.
+
+You will see the notebooks on **GitHub**. Think of GitHub as a public online folder for course code and files.
+
+For beginners, the easiest method is to open notebooks in **Google Colab** (runs in your browser, no installation required).
+
+## Notebook order for this course
+
+1. [01 Colab Intro](https://github.com/DigitalPasts/alpcourse/blob/main/notebooks/01_colab_intro.ipynb)
+2. [02 Python Brush up](https://github.com/DigitalPasts/alpcourse/blob/main/notebooks/02_Python_Brush_up.ipynb)
+3. [03 Vectorizing Texts](https://github.com/DigitalPasts/alpcourse/blob/main/notebooks/03_VectorizingTexts.ipynb)
+4. [04 Vector Space Model (Egyptian)](https://github.com/DigitalPasts/alpcourse/blob/main/notebooks/04_Vector_Space_Model_Egyptian.ipynb)
+5. [05 Vector Space Model](https://github.com/DigitalPasts/alpcourse/blob/main/notebooks/05_Vector_Space_Model.ipynb)
+6. [06 PMI (A. Sahala)](https://github.com/DigitalPasts/alpcourse/blob/main/notebooks/06_PMI_ASahala.ipynb)
+7. [09 Vectors to Networks](https://github.com/DigitalPasts/alpcourse/blob/main/notebooks/09_Vectors_to_Networks.ipynb)
+
+## How to run a notebook from GitHub (recommended)
+
+1. Open one notebook link above.
+2. On the GitHub page, click **Open in Colab**.  
+	(If you do not see this button, copy the GitHub URL and open: <https://colab.research.google.com/> → **GitHub** tab → paste URL.)
+3. In Colab, click **Copy to Drive** so you can edit your own copy.
+4. Run cells top-to-bottom with **Shift+Enter**.
+5. If asked, click **Connect** (top-right) to start the runtime.
+
+## Important habits
+
+- Always run cells in order from top to bottom.
+- Save your work in your own Google Drive copy.
+- If a cell fails, restart runtime and run all cells again.
+

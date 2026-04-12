@@ -1,0 +1,61 @@
+{
+    "pnum": "P225104",
+    "textID": "TIM 10, 134",
+    "surface": [
+        {
+            "surfaceType": "obverse",
+            "columns": [
+                {
+                    "columnNum": 1,
+                    "text": [
+                        {
+                            "lineNum": "1",
+                            "words": [
+                                "dub-sar",
+                                "hu-ru"
+                            ]
+                        },
+                        {
+                            "lineNum": "2",
+                            "words": [
+                                "a-ga-asz-gi4-gi4-me!(|ME+ASZ|)-e-ne"
+                            ]
+                        },
+                        {
+                            "lineNum": "3",
+                            "words": [
+                                "dub-sar",
+                                "hu-ru"
+                            ]
+                        },
+                        {
+                            "lineNum": "4",
+                            "words": [
+                                "a-ga-asz-gi4-gi4-me!(|ME+ASZ|)-e#-ne"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "surfaceType": "reverse",
+            "columns": [
+                {
+                    "columnNum": 1,
+                    "text": [
+                        {
+                            "lineNum": "1",
+                            "words": [
+                                "igi-bi",
+                                "3(disz)",
+                                "3(asz)",
+                                "6(disz)"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -604,11 +604,7 @@ Words: ['igi-bi', '3(disz)', '3(asz)', '6(disz)']
 </div>
 </div>
 <div id="cell-20" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:48.449539Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:48.444656Z&quot;}}" data-scrolled="true" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the output dictionary as a JSON file</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>pnum<span class="sc">}</span><span class="ss">.json"</span>, <span class="st">"w"</span>) <span class="im">as</span> json_file:</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    json.dump(output, json_file, indent<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the output dictionary as a JSON fileimport json, osos.makedirs('data/akkadian', exist_ok=True)with open(f"data/akkadian/{pnum}.json", "w") as json_file:    json.dump(output, json_file, indent=4)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Rewrite the code above into a function in the box below, use AI</p>
 <div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:48.453242Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:48.451033Z&quot;}}" data-scrolled="true" data-execution_count="22">
@@ -675,10 +671,7 @@ Words: ['igi-bi', '3(disz)', '3(asz)', '6(disz)']
 <span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>df_eg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-28" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:48.976861Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:48.970774Z&quot;}}" data-scrolled="true">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save as *.csv</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>fileName <span class="op">=</span> <span class="st">"aspelta_TLA_Sentence_"</span> <span class="op">+</span> sentenceID <span class="op">+</span> <span class="st">".csv"</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>df_eg.to_csv(fileName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save as *.csvimport osos.makedirs('data/egyptian', exist_ok=True)fileName = "aspelta_TLA_Sentence_" + sentenceID + ".csv"df_eg.to_csv("data/egyptian/" + fileName)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="akkadian-example-2-achaemenid-babylonian-texts-conll-u-format" class="level2">
@@ -958,15 +951,7 @@ Words: ['igi-bi', '3(disz)', '3(asz)', '6(disz)']
 <span id="cb39-57"><a href="#cb39-57" aria-hidden="true" tabindex="-1"></a>df_akk2.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-33" class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>df_akk2.to_csv(<span class="st">'Achemenet_Strassmaier_Darius1.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Saved to Achemenet_Strassmaier_Darius1.csv'</span>)</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_akk2[[<span class="st">'ref'</span>,<span class="st">'frag'</span>,<span class="st">'cf'</span>,<span class="st">'sense'</span>,<span class="st">'pos'</span>,<span class="st">'break'</span>]].to_string(index<span class="op">=</span><span class="va">False</span>))</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Discussion questions:</span></span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - Which fields are empty? What does that tell us about what CoNLL-U prioritises</span></span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   vs. what the ORACC pipeline provides?</span></span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - The 'line' field is empty here. How would you recover it from the CoNLL-U text?</span></span>
-<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - Why does some cells show '_' for lemma or sense? What does that represent?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> osos.makedirs(<span class="st">'data/akkadian'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)df_akk2.to_csv(<span class="st">'data/akkadian/Achemenet_Strassmaier_Darius1.csv'</span>, index<span class="op">=</span><span class="va">False</span>)<span class="bu">print</span>(<span class="st">'Saved to data/akkadian/Achemenet_Strassmaier_Darius1.csv'</span>)<span class="bu">print</span>(df_akk2[[<span class="st">'ref'</span>,<span class="st">'frag'</span>,<span class="st">'cf'</span>,<span class="st">'sense'</span>,<span class="st">'pos'</span>,<span class="st">'break'</span>]].to_string(index<span class="op">=</span><span class="va">False</span>))<span class="co"># Discussion questions:# - Which fields are empty? What does that tell us about what CoNLL-U prioritises#   vs. what the ORACC pipeline provides?# - The 'line' field is empty here. How would you recover it from the CoNLL-U text?# - Why does some cells show '_' for lemma or sense? What does that represent?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="egyptian-example-2-under-revision" class="level2">
@@ -1246,20 +1231,7 @@ Words: 17</code></pre>
 <span id="cb47-82"><a href="#cb47-82" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  ref=</span><span class="sc">{</span>r[<span class="st">'ref'</span>]<span class="sc">:&lt;28}</span><span class="ss">  frag=</span><span class="sc">{</span>r[<span class="st">'frag'</span>]<span class="sc">:&lt;22}</span><span class="ss">  cf=</span><span class="sc">{</span>r[<span class="st">'cf'</span>]<span class="sc">:&lt;18}</span><span class="ss">  pos=</span><span class="sc">{</span>r[<span class="st">'pos'</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-43" class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>df_hit <span class="op">=</span> pd.DataFrame(rows)</span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_hit.to_string(index<span class="op">=</span><span class="va">False</span>))</span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>df_hit.to_csv(<span class="st">'TLHdig_HKM9_CTH186.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Saved to TLHdig_HKM9_CTH186.csv'</span>)</span>
-<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Discussion questions:</span></span>
-<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="co"># - Which fields are we unable to fill for Hittite vs. the Akkadian ORACC data?</span></span>
-<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   What does that reveal about what each corpus prioritises?</span></span>
-<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="co"># - The 'sense' column contains German. What challenges does that create?</span></span>
-<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="co"># - The cu= attribute in SimTex gives cuneiform per line, not per word.</span></span>
-<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a><span class="co">#   How would you assign individual signs to words? What extra steps are needed?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pddf_hit <span class="op">=</span> pd.DataFrame(rows)<span class="bu">print</span>(df_hit.to_string(index<span class="op">=</span><span class="va">False</span>))<span class="im">import</span> osos.makedirs(<span class="st">'data/hittite'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)df_hit.to_csv(<span class="st">'data/hittite/TLHdig_HKM9_CTH186.csv'</span>, index<span class="op">=</span><span class="va">False</span>)<span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Saved to data/hittite/TLHdig_HKM9_CTH186.csv'</span>)<span class="co"># Discussion questions:# - Which fields are we unable to fill for Hittite vs. the Akkadian ORACC data?#   What does that reveal about what each corpus prioritises?# - The 'sense' column contains German. What challenges does that create?# - The cu= attribute in SimTex gives cuneiform per line, not per word.#   How would you assign individual signs to words? What extra steps are needed?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

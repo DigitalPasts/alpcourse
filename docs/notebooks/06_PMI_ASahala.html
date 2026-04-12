@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mutual Pointwise Information – Ancient Language Processing 2026 / Gordin and Lincke</title>
+<title>pmi_asahala – Ancient Language Processing / Gordin and Lincke</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,9 +108,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Mutual Pointwise Information – Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:title" content="Ancient Language Processing / Gordin and Lincke">
 <meta property="og:description" content="">
-<meta property="og:site_name" content="Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:site_name" content="Ancient Language Processing / Gordin and Lincke">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -124,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <img src="../digpasts_logo.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Ancient Language Processing 2026 / Gordin and Lincke</span>
+    <span class="navbar-title">Ancient Language Processing / Gordin and Lincke</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -141,29 +141,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../coursework.html"> 
 <span class="menu-text">Coursework</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code-notebooks" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Code Notebooks</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-code-notebooks">    
-        <li>
-    <a class="dropdown-item" href="../notebooks/index.html">
- <span class="dropdown-text">Notebooks</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/index.html"> 
+<span class="menu-text">Code Notebooks</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/01_colab_intro.html">
- <span class="dropdown-text">Colab Intro</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/02_Python_Brush_up.html">
- <span class="dropdown-text">Python Brush up</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/03_VectorizingTexts.html">
- <span class="dropdown-text">Vectorizing Texts</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Materials and Texts</span></a>
@@ -189,7 +170,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link active" data-scroll-target="#how-to-use">How to use?</a></li>
+  <li><a href="#mutual-pointwise-information" id="toc-mutual-pointwise-information" class="nav-link active" data-scroll-target="#mutual-pointwise-information">Mutual Pointwise Information</a>
+  <ul class="collapse">
+  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use?</a></li>
   <li><a href="#imports-and-constants" id="toc-imports-and-constants" class="nav-link" data-scroll-target="#imports-and-constants">Imports and constants</a></li>
   <li><a href="#functions-and-classes" id="toc-functions-and-classes" class="nav-link" data-scroll-target="#functions-and-classes">Functions and classes</a>
   <ul class="collapse">
@@ -204,31 +187,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#set-options-and-run-the-script" id="toc-set-options-and-run-the-script" class="nav-link" data-scroll-target="#set-options-and-run-the-script">Set options and run the script</a></li>
   <li><a href="#critical-bug-fixes" id="toc-critical-bug-fixes" class="nav-link" data-scroll-target="#critical-bug-fixes">Critical bug fixes</a></li>
   <li><a href="#other-fixes" id="toc-other-fixes" class="nav-link" data-scroll-target="#other-fixes">Other fixes</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Mutual Pointwise Information</h1>
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/DigitalPasts/alpcourse/blob/main/notebooks/06_PMI_ASahala.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="mutual-pointwise-information" class="level1">
+<h1>Mutual Pointwise Information</h1>
 <p>The code for this notebook has been prepared by <strong>Aleksi Sahala</strong> (University of Helsinki), 2019-2024, and is based on his research. It should be cited accordingly.</p>
 <p><a href="github.com/asahala">github.com/asahala</a></p>
 <section id="how-to-use" class="level2">
@@ -259,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="imports-and-constants" class="level2">
 <h2 class="anchored" data-anchor-id="imports-and-constants">Imports and constants</h2>
-<div id="6d187a92" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:4,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="1">
+<div id="6d187a92" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#from dictionary import dct</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools</span>
@@ -277,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tempfile</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co">#import os</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a3af472f" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-outputid="e8409c57-5714-4c88-8b21-a1de63ec7962" data-execution_count="2">
+<div id="a3af472f" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-outputid="e8409c57-5714-4c88-8b21-a1de63ec7962" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>__version__ <span class="op">=</span> <span class="st">"2024-05-19"</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'pmizer.py version </span><span class="sc">%s</span><span class="ch">\n</span><span class="st">'</span> <span class="op">%</span> __version__)</span>
@@ -309,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="functions-and-classes">Functions and classes</h2>
 <section id="logarithm-base-definition" class="level3">
 <h3 class="anchored" data-anchor-id="logarithm-base-definition">Logarithm base definition</h3>
-<div id="6fddb958" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="3">
+<div id="6fddb958" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># log-base 2 should be used by default</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _log(n):</span>
@@ -345,7 +321,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="input-output-tools" class="level3">
 <h3 class="anchored" data-anchor-id="input-output-tools">Input / Output tools</h3>
-<div id="e71cf9b3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="4">
+<div id="e71cf9b3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> IO:</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" Basic file IO-operations and verbose """</span></span>
@@ -405,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>factor = CSW value (this is used if postweight is set)</li>
 <li>oo = estimated number of all bigrams in the corpus</li>
 </ul>
-<div id="2ae374c6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="5">
+<div id="2ae374c6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">## POINTWISE MUTUAL INFORMATION BASED MEASURES</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PMI:</span>
@@ -586,7 +562,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="other-measures-and-statistical-tests" class="level3">
 <h3 class="anchored" data-anchor-id="other-measures-and-statistical-tests">Other measures and statistical tests</h3>
-<div id="df7ab436" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="6">
+<div id="df7ab436" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NormalizedExpectation:</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" Normalized Expectation as in Pecina 2006</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -706,7 +682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="context-similarity-weighting">Context Similarity Weighting</h3>
 <p>This is an initial version of CSW as in Sahala &amp; Linden (2020); performs similarly but has a space complexity of <code>O(n×m^2) (n = corpus size, m = window len)</code></p>
 <p>Sahala, Aleksi &amp; Krister Lindén. 2020. <a href="https://researchportal.helsinki.fi/files/158886805/KDIR_2020_12_CR.pdf">Improving Word Association Measures in Repetitive Corpora with Context Similarity Weighting</a>, in: A L N Fred &amp; J Filipe (eds.), <em>Proceedings of the 12th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management, IC3K 2020, Volume 1: KDIR, Budapest, Hungary, November 2-4, 2020.</em> SCITEPRESS Science And Technology Publications, Setúbal, 48–58, https://doi.org/10.5220/0010106800480058</p>
-<div id="b98c4333" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="7">
+<div id="b98c4333" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> FormulaicMeasures:</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">@staticmethod</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> compensate(words, collocate, uniqs):</span>
@@ -742,7 +718,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="text-container-and-basic-text-analysis-tools" class="level3">
 <h3 class="anchored" data-anchor-id="text-container-and-basic-text-analysis-tools">Text container and basic text analysis tools</h3>
-<div id="1880a634" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="8">
+<div id="1880a634" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898655951,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Text(<span class="bu">object</span>):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, filename, ignore<span class="op">=</span>LACUNAE):</span>
@@ -986,7 +962,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="association-measure-tools" class="level3">
 <h3 class="anchored" data-anchor-id="association-measure-tools">Association measure tools</h3>
-<div id="8e8c1531" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898656401,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="9">
+<div id="8e8c1531" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898656401,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Associations:</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, text, <span class="op">**</span>kwargs):</span>
@@ -1654,7 +1630,7 @@ will calculate collocates for <em>kakku[weapon]N ONLY</em> if the word <em>napar
 <li><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>stopwords<span class="op">=</span>z.tf_idf(threshold<span class="op">=</span><span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 Will generate a list of 1000 most uninteresting words in the text by using TF-IDF. Note that this is a part of the Text class.</li>
 </ul>
-<div id="D1KQeEvorn4m" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898656401,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="10">
+<div id="D1KQeEvorn4m" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898656401,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_file_from_github(url):</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fetch the content from URL</span></span>
@@ -1668,13 +1644,13 @@ Will generate a list of 1000 most uninteresting words in the text by using TF-ID
 <span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> temp_file.name  <span class="co"># Return the path of the temporary file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="jD1m1bKLrrCO" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898657359,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:959,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-execution_count="11">
+<div id="jD1m1bKLrrCO" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:959,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898657359,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># URL of the raw file on GitHub</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'https://raw.githubusercontent.com/asahala/Pmizer/master/data/dataset.txt'</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>temp_filename <span class="op">=</span> fetch_file_from_github(url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="505c02b1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898657359,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;}}}" data-outputid="42d699bb-5ee9-402c-c6ed-3c3b364fb925" data-execution_count="12">
+<div id="505c02b1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716898657359,&quot;user&quot;:{&quot;displayName&quot;:&quot;Eliese-Sophia Lincke&quot;,&quot;userId&quot;:&quot;10981543332841100954&quot;},&quot;user_tz&quot;:-120}}" data-outputid="42d699bb-5ee9-402c-c6ed-3c3b364fb925" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#z = Text('data/PMI_dataset.txt') # Dataset in TPL (text per line) format</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> Text(temp_filename)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1752,6 +1728,7 @@ Will generate a list of 1000 most uninteresting words in the text by using TF-ID
     2020-01-01: Additional measures such as Jaccard etc.</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

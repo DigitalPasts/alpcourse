@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro – Ancient Language Processing 2026 / Gordin and Lincke</title>
+<title>vector_space_model_egyptian – Ancient Language Processing / Gordin and Lincke</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,10 +111,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Intro – Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:title" content="Ancient Language Processing / Gordin and Lincke">
 <meta property="og:description" content="">
 <meta property="og:image" content="04_Vector_Space_Model_Egyptian_files/figure-html/cell-30-output-2.png">
-<meta property="og:site_name" content="Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:site_name" content="Ancient Language Processing / Gordin and Lincke">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <img src="../digpasts_logo.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Ancient Language Processing 2026 / Gordin and Lincke</span>
+    <span class="navbar-title">Ancient Language Processing / Gordin and Lincke</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -145,29 +145,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../coursework.html"> 
 <span class="menu-text">Coursework</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code-notebooks" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Code Notebooks</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-code-notebooks">    
-        <li>
-    <a class="dropdown-item" href="../notebooks/index.html">
- <span class="dropdown-text">Notebooks</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/index.html"> 
+<span class="menu-text">Code Notebooks</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/01_colab_intro.html">
- <span class="dropdown-text">Colab Intro</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/02_Python_Brush_up.html">
- <span class="dropdown-text">Python Brush up</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/03_VectorizingTexts.html">
- <span class="dropdown-text">Vectorizing Texts</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Materials and Texts</span></a>
@@ -193,7 +174,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preprocessing-the-corpus" id="toc-preprocessing-the-corpus" class="nav-link active" data-scroll-target="#preprocessing-the-corpus">Preprocessing the corpus</a>
+  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro">Intro</a></li>
+  <li><a href="#preprocessing-the-corpus" id="toc-preprocessing-the-corpus" class="nav-link" data-scroll-target="#preprocessing-the-corpus">Preprocessing the corpus</a>
   <ul class="collapse">
   <li><a href="#imports" id="toc-imports" class="nav-link" data-scroll-target="#imports">Imports</a></li>
   <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a>
@@ -211,30 +193,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Intro</h1>
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/DigitalPasts/alpcourse/blob/main/notebooks/04_Vector_Space_Model_Egyptian.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="intro" class="level1">
+<h1>Intro</h1>
 <p>In this notebook, we explore a collection of ancient Akkadian and ancient Egyptian texts using the vector space model approach described by <a href="https://www.humanitiesdataanalysis.org/vector-space-model/notebook.html">Karsdorp et al.&nbsp;in the chapter “Exploring Texts using the Vector Space Model”</a>. By representing the texts as numeric vectors capturing word frequencies, we can quantify the lexical similarities and differences between corpora in each of these two ancient languages. The vector space model allows us to reason about texts spatially and apply geometric concepts like distance metrics to assess how “close” texts are to each other based on shared vocabulary.</p>
 <p>We preprocess the texts by tokenizing them into words, constructing a document-term matrix recording word frequencies per text, and analyzing the matrix using tools from the Python scientific computing stack, including NumPy, SciPy and Scikit-learn. Through techniques like tSNE (t-Distributed Stochastic Neighbor Embedding) and aggregation by text metadata like script type, language or genre, we explore patterns in the Akkadian and Egyptian corpora and showcase how the vector space model can yield quantitative insights into ancient textual data. The notebook serves as an example application of the concepts and methods covered in depth by Karsdorp et al.&nbsp;in their chapter.</p>
 <p>This notebook has been prepared by <strong>Avital Romach</strong> and is based on her research. It should be cited accordingly (see citation information at the bottom).</p>
+</section>
 <section id="preprocessing-the-corpus" class="level1">
 <h1>Preprocessing the corpus</h1>
 <section id="imports" class="level2">

@@ -19,14 +19,14 @@ def md_to_html(text):
     return markdown.markdown(str(text), extensions=['extra'])
 
 # Convert Markdown in these columns to HTML so the HTML is rendered in Quarto
-for col in ['Assignment', 'Materials']:
+for col in ['Assignment', 'Required Reading', 'Materials']:
     if col in df.columns:
         df[col] = df[col].fillna('').apply(md_to_html)
 
 # Render one table per Unit
 for unit in df['Unit'].unique():
     display(HTML(f"<h2>{unit}</h2>"))
-    sub = df[df['Unit'] == unit][['Date','Topic','Assignment','Materials']]
+    sub = df[df['Unit'] == unit][['Date','Topic','Assignment','Required Reading','Materials']]
     html = sub.to_html(index=False, escape=False, classes='schedule-table')
     display(HTML(html))
 ```

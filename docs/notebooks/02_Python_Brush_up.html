@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Brushing up on your Python Skills – Ancient Language Processing 2026 / Gordin and Lincke</title>
+<title>python_brush_up – Ancient Language Processing / Gordin and Lincke</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,9 +108,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Brushing up on your Python Skills – Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:title" content="Ancient Language Processing / Gordin and Lincke">
 <meta property="og:description" content="">
-<meta property="og:site_name" content="Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:site_name" content="Ancient Language Processing / Gordin and Lincke">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -124,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <img src="../digpasts_logo.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Ancient Language Processing 2026 / Gordin and Lincke</span>
+    <span class="navbar-title">Ancient Language Processing / Gordin and Lincke</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -141,29 +141,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../coursework.html"> 
 <span class="menu-text">Coursework</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code-notebooks" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Code Notebooks</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-code-notebooks">    
-        <li>
-    <a class="dropdown-item" href="../notebooks/index.html">
- <span class="dropdown-text">Notebooks</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/index.html"> 
+<span class="menu-text">Code Notebooks</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/01_colab_intro.html">
- <span class="dropdown-text">Colab Intro</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/02_Python_Brush_up.html">
- <span class="dropdown-text">Python Brush up</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/03_VectorizingTexts.html">
- <span class="dropdown-text">Vectorizing Texts</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Materials and Texts</span></a>
@@ -189,39 +170,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#akkadian-example-1" id="toc-akkadian-example-1" class="nav-link active" data-scroll-target="#akkadian-example-1">Akkadian Example 1:</a>
+  <li><a href="#brushing-up-on-your-python-skills" id="toc-brushing-up-on-your-python-skills" class="nav-link active" data-scroll-target="#brushing-up-on-your-python-skills">Brushing up on your Python Skills</a>
+  <ul class="collapse">
+  <li><a href="#akkadian-example-1" id="toc-akkadian-example-1" class="nav-link" data-scroll-target="#akkadian-example-1">Akkadian Example 1:</a>
   <ul class="collapse">
   <li><a href="#task-1" id="toc-task-1" class="nav-link" data-scroll-target="#task-1">Task 1:</a></li>
   <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2:</a></li>
   </ul></li>
   <li><a href="#egyptian-example-1" id="toc-egyptian-example-1" class="nav-link" data-scroll-target="#egyptian-example-1">Egyptian Example 1:</a></li>
-  <li><a href="#akkadian-example-2" id="toc-akkadian-example-2" class="nav-link" data-scroll-target="#akkadian-example-2">Akkadian Example 2:</a></li>
-  <li><a href="#egyptian-example-2" id="toc-egyptian-example-2" class="nav-link" data-scroll-target="#egyptian-example-2">Egyptian Example 2:</a></li>
+  <li><a href="#akkadian-example-2-achemenet-babylonian-texts-conll-u-format" id="toc-akkadian-example-2-achemenet-babylonian-texts-conll-u-format" class="nav-link" data-scroll-target="#akkadian-example-2-achemenet-babylonian-texts-conll-u-format">Akkadian Example 2: Achemenet Babylonian Texts (CoNLL-U format)</a></li>
+  <li><a href="#egyptian-example-2-under-revision" id="toc-egyptian-example-2-under-revision" class="nav-link" data-scroll-target="#egyptian-example-2-under-revision">Egyptian Example 2 (under revision)</a></li>
+  <li><a href="#hittite-example-1-tlhdig-administrative-letters-simtex-xml-format" id="toc-hittite-example-1-tlhdig-administrative-letters-simtex-xml-format" class="nav-link" data-scroll-target="#hittite-example-1-tlhdig-administrative-letters-simtex-xml-format">Hittite Example 1: TLHdig Administrative Letters (SimTex XML format)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Brushing up on your Python Skills</h1>
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/DigitalPasts/alpcourse/blob/main/notebooks/02_Python_Brush_up.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="brushing-up-on-your-python-skills" class="level1">
+<h1>Brushing up on your Python Skills</h1>
 <p>The basics of this class are taught in Python. And the neglected basics of ALP is preprocessing our texts.</p>
 <p>Preprocessing for ALP is much broader than what computer and data scientists usually mean. Philological conventions in printed and digital publications hold much more information that needs to be correctly parsed before any computational manipulation (analysis).</p>
 <p>In this notebook, we are going to provide four examples of messy texts: two in Egyptian and two in Akkadian. We are going to work through the process of how we should parse the texts, what information we are losing when parsing them, and brushing up on basic Python syntax and functions while we’re at it.</p>
@@ -595,214 +572,513 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>df_eg.to_csv(fileName)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="akkadian-example-2" class="level2">
-<h2 class="anchored" data-anchor-id="akkadian-example-2">Akkadian Example 2:</h2>
-<p>consider the following Akkadian text:</p>
-<p>http://www.achemenet.com//fr/item/?/sources-textuelles/textes-par-publication/Strassmaier_Cyrus/1665118</p>
-<p>6 udu-nita<sub>2</sub> <i>ina</i> šu<sup>II</sup> <sup>Id</sup>en-gi a-<i>šú šá</i> <sup>Id</sup>[</p>
-<p><i>a-na</i> 8 gín 4-<i>tú </i>kù-babbar<i> i-na</i> kù-babbar</p>
-<p><i>šá</i> <i>i-di</i> é [ o o o ]<i> a-na</i> é-babbar-ra</p>
-<p><i>it-ta-din</i> 5 udu-nita<sub>2</sub> <i>šá</i> <sup>I</sup><i>ka-ṣir</i></p>
-<p>a-<i>šú šá</i> <sup>Id</sup>en-mu<i> a-na</i> 7 gín 4-<i>tú</i></p>
-<p>kù-babbar <i>šá</i> <i>muh-hi</i> <i>dul-lu</i> <sup>I</sup>mu-mu</p>
-<p><i>ú-šá-hi-su a-na</i> <i>lìb-bi</i> sì-<i>na</i></p>
-<p>1 udu-nita<sub>2</sub><i> a-na</i> 1 gín 4-<i>tú </i>kù-babbar</p>
-<p><i>ina</i> šu<sup>II</sup> <sup>Id</sup>utu-ba-<i>šá</i><sup>!</sup> [</p>
-<p>1 udu-nita<sub>2</sub> <i>šá</i> <sup>I</sup>DU-[</p>
-<p><i>a-na</i> 1<sup>?</sup> gín [</p>
-<p>pap [13 udu-nita<sub>2</sub>-meš</p>
-<p>iti du<sub>6</sub> u<sub>4</sub> [o-kam] mu sag nam-lugal-la</p>
-<p><sup>I</sup><i>ku-ra-áš</i> lugal tin-tir<sup>ki</sup> <i>u</i> kur-kur</p>
-<p>How would you preprocess this text?</p>
-<div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:26:38.626941Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:26:38.617531Z&quot;}}">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">## raw text</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>akk2 <span class="op">=</span> <span class="st">"""6 udu-nita&lt;sub&gt;2&lt;/sub&gt; &lt;i&gt;ina&lt;/i&gt; šu&lt;sup&gt;II&lt;/sup&gt; &lt;sup&gt;Id&lt;/sup&gt;en-gi a-&lt;i&gt;šú šá&lt;/i&gt; &lt;sup&gt;Id&lt;/sup&gt;[</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;i&gt;a-na&lt;/i&gt; 8 gín 4-&lt;i&gt;tú &lt;/i&gt;kù-babbar&lt;i&gt; i-na&lt;/i&gt; kù-babbar </span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;i&gt;šá&lt;/i&gt; &lt;i&gt;i-di&lt;/i&gt; é [ o o o ]&lt;i&gt; a-na&lt;/i&gt; é-babbar-ra </span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;i&gt;it-ta-din&lt;/i&gt; 5 udu-nita&lt;sub&gt;2&lt;/sub&gt; &lt;i&gt;šá&lt;/i&gt; &lt;sup&gt;I&lt;/sup&gt;&lt;i&gt;ka-ṣir&lt;/i&gt; </span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="st">a-&lt;i&gt;šú šá&lt;/i&gt; &lt;sup&gt;Id&lt;/sup&gt;en-mu&lt;i&gt; a-na&lt;/i&gt; 7 gín 4-&lt;i&gt;tú&lt;/i&gt; </span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="st">kù-babbar &lt;i&gt;šá&lt;/i&gt; &lt;i&gt;muh-hi&lt;/i&gt; &lt;i&gt;dul-lu&lt;/i&gt; &lt;sup&gt;I&lt;/sup&gt;mu-mu </span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;i&gt;ú-šá-hi-su a-na&lt;/i&gt; &lt;i&gt;lìb-bi&lt;/i&gt; sì-&lt;i&gt;na&lt;/i&gt; </span></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="st">1 udu-nita&lt;sub&gt;2&lt;/sub&gt;&lt;i&gt; a-na&lt;/i&gt; 1 gín 4-&lt;i&gt;tú &lt;/i&gt;kù-babbar </span></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;i&gt;ina&lt;/i&gt; šu&lt;sup&gt;II&lt;/sup&gt; &lt;sup&gt;Id&lt;/sup&gt;utu-ba-&lt;i&gt;šá&lt;/i&gt;&lt;sup&gt;!&lt;/sup&gt; [</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="st">1 udu-nita&lt;sub&gt;2&lt;/sub&gt; &lt;i&gt;šá&lt;/i&gt; &lt;sup&gt;I&lt;/sup&gt;DU-[</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;i&gt;a-na&lt;/i&gt; 1&lt;sup&gt;?&lt;/sup&gt; gín [</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="st">pap [13 udu-nita&lt;sub&gt;2&lt;/sub&gt;-meš</span></span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="st">iti du&lt;sub&gt;6&lt;/sub&gt; u&lt;sub&gt;4&lt;/sub&gt; [o-kam] mu sag nam-lugal-la </span></span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;sup&gt;I&lt;/sup&gt;&lt;i&gt;ku-ra-áš&lt;/i&gt; lugal tin-tir&lt;sup&gt;ki&lt;/sup&gt; &lt;i&gt;u&lt;/i&gt; kur-kur"""</span></span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>akk2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="akkadian-example-2-achemenet-babylonian-texts-conll-u-format" class="level2">
+<h2 class="anchored" data-anchor-id="akkadian-example-2-achemenet-babylonian-texts-conll-u-format">Akkadian Example 2: Achemenet Babylonian Texts (CoNLL-U format)</h2>
+<blockquote class="blockquote">
+<p><strong>Archived (original example):</strong> The original version of this cell loaded raw HTML from the Achemenet website (<code>http://www.achemenet.com</code>) and stripped <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>, and <code>&lt;i&gt;</code> markup to produce a clean transliteration, then parsed it into word- and sign-level dictionaries. That site has since migrated its data to Zenodo as structured annotated files. The HTML-cleaning techniques demonstrated there (<code>.replace()</code>, <code>re.sub()</code>, hyphen-splitting) remain relevant and are also illustrated in Akkadian Example 1.</p>
+</blockquote>
+<hr>
+<p>The <a href="http://www.achemenet.com">Achemenet project</a> published transliterations of Babylonian cuneiform texts from the Achaemenid Persian Empire (550–330 BCE). The corpus has been automatically lemmatized by the University of Helsinki and published on Zenodo:</p>
+<blockquote class="blockquote">
+<p>Alstola, T., Sahala, A., Valk, J., and Ong, M. (2024). <em>Linguistically Annotated Achemenet Babylonian Texts</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.14223709">https://doi.org/10.5281/zenodo.14223709</a></p>
+</blockquote>
+<p>The files use a <strong>CoNLL-U</strong> format — tab-separated, one token per line, with comment lines beginning with <code>#</code>. In Ancient Language Processing there is no single dominant annotation standard. Each corpus project makes its own structural choices: ATF, JSON, XML, CSV, CoNLL-U… The skill is not memorising any one format, but learning to read whatever structure a corpus provides and reshaping it around your specific research question.</p>
+<p>The Achemenet CoNLL-U uses 17 columns:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 40%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Column</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><code>id</code></td>
+<td>Token index within the text</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><code>form</code></td>
+<td>Transliteration (ORACC ATF conventions)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><code>lemma</code></td>
+<td>Dictionary lemma</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><code>upos</code></td>
+<td>Universal POS tag</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><code>xpos</code></td>
+<td>Project-specific POS tag</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><code>feats</code></td>
+<td>Morphological features</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><code>head</code></td>
+<td>Index of syntactic head</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><code>deprel</code></td>
+<td>Dependency relation</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><code>deps</code></td>
+<td>Enhanced dependencies</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td><code>misc</code></td>
+<td>Miscellaneous features (e.g.&nbsp;<code>lacuna_large</code>)</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><code>eng</code></td>
+<td>English gloss</td>
+</tr>
+<tr class="even">
+<td>12–17</td>
+<td><code>norm</code>, <code>lang</code>, <code>formctx</code>, <code>xposctx</code>, <code>score</code>, <code>lock</code></td>
+<td>Additional metadata</td>
+</tr>
+</tbody>
+</table>
+<p>Text boundaries are marked by comment lines: <code># X001171 = Strassmaier, Darius 1</code></p>
+<p><strong>Task:</strong> Parse the CoNLL-U data, select the columns relevant to your analysis, and export to our custom CSV format.</p>
+<div id="cell-29" class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The Achemenet corpus is available from Zenodo:</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://doi.org/10.5281/zenodo.14223709</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># To download and work with the full archive in Colab:</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   import requests, zipfile, io</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   r = requests.get('https://zenodo.org/records/19067652/files/Achemenet.zip?download=1')</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   z = zipfile.ZipFile(io.BytesIO(r.content))</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   raw = z.read('Strassmaier.conllu').decode('utf-8')</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Below we embed the first text (Strassmaier, Darius 1) directly</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># so the notebook runs without a network connection.</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>akk2_conllu <span class="op">=</span> <span class="st">"""# global.columns = id form lemma upos xpos feats head deprel deps misc eng norm lang formctx xposctx score lock</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="st"># X001171 = Strassmaier, Darius 1</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="st">1   10  _   _   n   empty   root    0   _   num_cardinal    _   _   _   _   _   _   _</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="st">2   UDU-NITA₂   immeru  _   N   empty   child   1   _   _   sheep   _   _   _   _   4.0 _</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="st">3   1+en    ištēn   _   NU  empty   child   1   _   _   one _   _   _   _   4.0 _</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="st">4   GU₄ alpu    _   N   empty   child   1   _   _   bull    _   _   _   _   5.0 _</span></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="st">5   NINDA   nindanu _   N   empty   child   1   _   _   rod _   _   _   _   4.0 _</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="st">6   ... _   _   u   empty   child   1   _   lacuna_large    _   _   _   _   _   _   _</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="st">7   ša₂ ša  _   DET empty   child   1   _   _   of  _   _   _   _   5.0 _</span></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="st">8   {lu₂}KIN-GI₄-A  mār-šipri   _   N   empty   child   1   _   _   X-X _   _   _   _   5.0 _</span></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a><span class="st">9   ša₂ ša  _   DET empty   child   1   _   _   of  _   _   _   _   5.0 _</span></span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a><span class="st">10  muh-hi  muhhu   _   N   empty   child   1   _   _   skull   _   _   _   _   5.0 _</span></span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a><span class="st">11  ... _   _   u   empty   child   1   _   lacuna_large    _   _   _   _   _   _   _</span></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a><span class="st">12  id-din-nu   nadānu  _   V   empty   child   1   _   _   give    _   _   _   _   5.0 _</span></span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a><span class="st">13  ina ina _   PRP empty   child   1   _   _   in  _   _   _   _   5.0 _</span></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a><span class="st">14  lib₃-bi libbu   _   N   empty   child   1   _   _   interior    _   _   _   _   5.0 _</span></span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a><span class="st">15  ... _   _   u   empty   child   1   _   lacuna_large    _   _   _   _   _   _   _</span></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a><span class="st">16  1   _   _   n   empty   child   1   _   num_cardinal    _   _   _   _   _   _   _</span></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a><span class="st">17  GU₄ alpu    _   N   empty   child   1   _   _   bull    _   _   _   _   5.0 _</span></span>
+<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a><span class="st">18  šuk-lu-lu   šuklulu _   AJ  empty   child   1   _   _   complete    _   _   _   _   5.0 _</span></span>
+<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a><span class="st">19  U₄  ūmu _   N   empty   child   1   _   _   day _   _   _   _   5.0 _</span></span>
+<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a><span class="st">20  20-KAM  _   _   n   empty   child   1   _   num_ordinal _   _   _   _   _   _   _</span></span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a><span class="st">21  ša₂ ša  _   DET empty   child   1   _   _   of  _   _   _   _   5.0 _</span></span>
+<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a><span class="st">22  </span><span class="sc">{iti}</span><span class="st">AB Ṭebetu  _   MN  empty   child   1   _   _   Ṭebetu  _   _   _   _   5.0 _</span></span>
+<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a><span class="st">23  it-tal-ka   alāku   _   V   empty   child   1   _   _   go  _   _   _   _   4.0 _</span></span>
+<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a><span class="st">24  2   _   _   n   empty   child   1   _   num_cardinal    _   _   _   _   _   _   _</span></span>
+<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a><span class="st">25  UDU-NITA₂   immeru  _   N   empty   child   1   _   _   sheep   _   _   _   _   4.0 _</span></span>
+<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a><span class="st">26  ša₂ ša  _   REL empty   child   1   _   _   that    _   _   _   _   5.0 _</span></span>
+<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a><span class="st">27  ina ina _   PRP empty   child   1   _   _   in  _   _   _   _   5.0 _</span></span>
+<span id="cb23-43"><a href="#cb23-43" aria-hidden="true" tabindex="-1"></a><span class="st">28  IGI pānu    _   N   empty   child   1   _   _   front   _   _   _   _   5.0 _</span></span>
+<span id="cb23-44"><a href="#cb23-44" aria-hidden="true" tabindex="-1"></a><span class="st">29  </span><span class="sc">{m}</span><span class="st">...  _   _   u   empty   child   1   _   lacuna_large    _   _   _   _   _   _   _</span></span>
+<span id="cb23-45"><a href="#cb23-45" aria-hidden="true" tabindex="-1"></a><span class="st">30  6   _   _   n   empty   child   1   _   num_cardinal    _   _   _   _   _   _   _</span></span>
+<span id="cb23-46"><a href="#cb23-46" aria-hidden="true" tabindex="-1"></a><span class="st">31  UDU-NITA₂   immeru  _   N   empty   child   1   _   _   sheep   _   _   _   _   4.0 _</span></span>
+<span id="cb23-47"><a href="#cb23-47" aria-hidden="true" tabindex="-1"></a><span class="st">32  ... _   _   u   empty   child   1   _   lacuna_large    _   _   _   _   _   _   _</span></span>
+<span id="cb23-48"><a href="#cb23-48" aria-hidden="true" tabindex="-1"></a><span class="st">33  ... _   _   u   empty   child   1   _   lacuna_large    _   _   _   _   _   _   _</span></span>
+<span id="cb23-49"><a href="#cb23-49" aria-hidden="true" tabindex="-1"></a><span class="st">34  ina ina _   PRP empty   child   1   _   _   in  _   _   _   _   5.0 _</span></span>
+<span id="cb23-50"><a href="#cb23-50" aria-hidden="true" tabindex="-1"></a><span class="st">35  IGI mahru   _   N   empty   child   1   _   _   front   _   _   _   _   5.0 _</span></span>
+<span id="cb23-51"><a href="#cb23-51" aria-hidden="true" tabindex="-1"></a><span class="st">36  </span><span class="sc">{m}</span><span class="st">IR₃-</span><span class="sc">{d}</span><span class="st">SAGGAR₂   Arad-Bunene _   PN  empty   child   1   _   _   Arad-Bunene _   _   _   _   4.0 _</span></span>
+<span id="cb23-52"><a href="#cb23-52" aria-hidden="true" tabindex="-1"></a><span class="st">37  1/3 _   _   n   empty   child   1   _   _   _   _   _   _   _   5.0 _</span></span>
+<span id="cb23-53"><a href="#cb23-53" aria-hidden="true" tabindex="-1"></a><span class="st">38  2   _   _   n   empty   child   1   _   num_cardinal    _   _   _   _   _   _   _</span></span>
+<span id="cb23-54"><a href="#cb23-54" aria-hidden="true" tabindex="-1"></a><span class="st">39  GIN₂    šiqlu   _   N   empty   child   1   _   _   unit    _   _   _   _   5.0 _</span></span>
+<span id="cb23-55"><a href="#cb23-55" aria-hidden="true" tabindex="-1"></a><span class="st">40  KU₃-BABBAR  kaspu   _   N   empty   child   1   _   _   silver  _   _   _   _   4.0 _</span></span>
+<span id="cb23-56"><a href="#cb23-56" aria-hidden="true" tabindex="-1"></a><span class="st">41  TA  ištu    _   PRP empty   child   1   _   _   from    _   _   _   _   5.0 _</span></span>
+<span id="cb23-57"><a href="#cb23-57" aria-hidden="true" tabindex="-1"></a><span class="st">42  re-hi   rēhu    _   AJ  empty   child   1   _   _   remaining   _   _   _   _   5.0 _</span></span>
+<span id="cb23-58"><a href="#cb23-58" aria-hidden="true" tabindex="-1"></a><span class="st">43  a-na    ana _   PRP empty   child   1   _   _   to  _   _   _   _   5.0 _</span></span>
+<span id="cb23-59"><a href="#cb23-59" aria-hidden="true" tabindex="-1"></a><span class="st">44  6   _   _   n   empty   child   1   _   num_cardinal    _   _   _   _   _   _   _</span></span>
+<span id="cb23-60"><a href="#cb23-60" aria-hidden="true" tabindex="-1"></a><span class="st">45  UDU-NITA₂   immeru  _   N   empty   child   1   _   _   sheep   _   _   _   _   4.0 _</span></span>
+<span id="cb23-61"><a href="#cb23-61" aria-hidden="true" tabindex="-1"></a><span class="st">46  a-na    ana _   PRP empty   child   1   _   _   to  _   _   _   _   5.0 _</span></span>
+<span id="cb23-62"><a href="#cb23-62" aria-hidden="true" tabindex="-1"></a><span class="st">47  </span><span class="sc">{m}</span><span class="st">NI-TIN-TU₄   Nidintu _   PN  empty   child   1   _   _   Nidintu _   _   _   _   4.0 _</span></span>
+<span id="cb23-63"><a href="#cb23-63" aria-hidden="true" tabindex="-1"></a><span class="st">48  SI₃-NU  nadānu  _   V   empty   child   1   _   _   give    _   _   _   _   0.0 _</span></span>
+<span id="cb23-64"><a href="#cb23-64" aria-hidden="true" tabindex="-1"></a><span class="st">49  UDU-NITA₂   immeru  _   N   empty   child   1   _   _   sheep   _   _   _   _   4.0 _</span></span>
+<span id="cb23-65"><a href="#cb23-65" aria-hidden="true" tabindex="-1"></a><span class="st">50  a-na    ana _   PRP empty   child   1   _   _   to  _   _   _   _   5.0 _</span></span>
+<span id="cb23-66"><a href="#cb23-66" aria-hidden="true" tabindex="-1"></a><span class="st">51  sat-tuk sattukku    _   N   empty   child   1   _   _   regular offering    _   _   _   _   4.0 _</span></span>
+<span id="cb23-67"><a href="#cb23-67" aria-hidden="true" tabindex="-1"></a><span class="st">52  ina ina _   PRP empty   child   1   _   _   in  _   _   _   _   5.0 _</span></span>
+<span id="cb23-68"><a href="#cb23-68" aria-hidden="true" tabindex="-1"></a><span class="st">53  IGI mahru   _   N   empty   child   1   _   _   front   _   _   _   _   5.0 _</span></span>
+<span id="cb23-69"><a href="#cb23-69" aria-hidden="true" tabindex="-1"></a><span class="st">54  </span><span class="sc">{m}</span><span class="st">šu-zu-bu Šuzubu  _   PN  empty   child   1   _   _   Šuzubu  _   _   _   _   4.0 _</span></span>
+<span id="cb23-70"><a href="#cb23-70" aria-hidden="true" tabindex="-1"></a><span class="st">55  </span><span class="sc">{iti}</span><span class="st">ZIZ₂   Šabaṭu  _   MN  empty   child   1   _   _   Šabaṭu  _   _   _   _   5.0 _</span></span>
+<span id="cb23-71"><a href="#cb23-71" aria-hidden="true" tabindex="-1"></a><span class="st">56  U₄  ūmu _   N   empty   child   1   _   _   day _   _   _   _   5.0 _</span></span>
+<span id="cb23-72"><a href="#cb23-72" aria-hidden="true" tabindex="-1"></a><span class="st">57  20-KAM  _   _   n   empty   child   1   _   num_ordinal _   _   _   _   _   _   _</span></span>
+<span id="cb23-73"><a href="#cb23-73" aria-hidden="true" tabindex="-1"></a><span class="st">58  MU  šattu   _   N   empty   child   1   _   _   year    _   _   _   _   5.0 _</span></span>
+<span id="cb23-74"><a href="#cb23-74" aria-hidden="true" tabindex="-1"></a><span class="st">59  SAG rēšu    _   N   empty   child   1   _   _   head    _   _   _   _   5.0 _</span></span>
+<span id="cb23-75"><a href="#cb23-75" aria-hidden="true" tabindex="-1"></a><span class="st">60  ... _   _   u   empty   child   1   _   lacuna_large    _   _   _   _   _   _   _</span></span>
+<span id="cb23-76"><a href="#cb23-76" aria-hidden="true" tabindex="-1"></a><span class="st">61  </span><span class="sc">{m}</span><span class="st">da-ri-uš-šu₂ Darius  _   RN  empty   child   1   _   _   Darius  _   _   _   _   4.0 _</span></span>
+<span id="cb23-77"><a href="#cb23-77" aria-hidden="true" tabindex="-1"></a><span class="st">62  LUGAL   šarru   _   N   empty   child   1   _   _   king    _   _   _   _   5.0 _</span></span>
+<span id="cb23-78"><a href="#cb23-78" aria-hidden="true" tabindex="-1"></a><span class="st">63  TIN-TIR</span><span class="sc">{ki}</span><span class="st"> Babili  _   SN  empty   child   1   _   _   Babili  _   _   _   _   4.0 _</span></span>
+<span id="cb23-79"><a href="#cb23-79" aria-hidden="true" tabindex="-1"></a><span class="st">64  LUGAL   šarru   _   N   empty   child   1   _   _   king    _   _   _   _   5.0 _</span></span>
+<span id="cb23-80"><a href="#cb23-80" aria-hidden="true" tabindex="-1"></a><span class="st">65  KUR-KUR mātu    _   N   empty   child   1   _   _   lands   _   _   _   _   4.0 TRUE"""</span></span>
+<span id="cb23-81"><a href="#cb23-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-82"><a href="#cb23-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the first few lines to understand the raw format</span></span>
+<span id="cb23-83"><a href="#cb23-83" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> akk2_conllu.strip().split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)[:<span class="dv">8</span>]:</span>
+<span id="cb23-84"><a href="#cb23-84" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:26:39.251124Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:26:39.233972Z&quot;}}" data-scrolled="true">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Clean the raw text in akk2</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>akk2 <span class="op">=</span> akk2.replace(<span class="st">"&lt;sub&gt;"</span>, <span class="st">""</span>)</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>akk2 <span class="op">=</span> akk2.replace(<span class="st">"&lt;/sub&gt;"</span>, <span class="st">""</span>)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Harmonize word and sign boundaries</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Shift blank before/after &lt;i&gt;/&lt;/i&gt;</span></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>akk2 <span class="op">=</span> akk2.replace(<span class="st">" &lt;/i&gt;"</span>, <span class="st">"&lt;/i&gt; "</span>)</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>akk2 <span class="op">=</span> akk2.replace(<span class="st">"&lt;i&gt; "</span>, <span class="st">" &lt;i&gt;"</span>)</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co">#print(akk2)</span></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Add hyphen before &lt;sup&gt; tags if there is no space before the tag</span></span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>akk2 <span class="op">=</span> re.sub(<span class="vs">r'</span><span class="kw">(</span><span class="pp">[^ ]</span><span class="kw">)(</span><span class="vs">&lt;sup&gt;</span><span class="kw">)</span><span class="vs">'</span>, <span class="vs">r'</span><span class="ch">\1</span><span class="vs">-</span><span class="ch">\2</span><span class="vs">'</span>, akk2)              </span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Add hyphen after &lt;/sup&gt; and &lt;/i&gt; tags if there is no space after the tag</span></span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>akk2 <span class="op">=</span> re.sub(<span class="vs">r'</span><span class="kw">(</span><span class="vs">&lt;/sup&gt;</span><span class="cf">|</span><span class="vs">&lt;/i&gt;</span><span class="kw">)(</span><span class="pp">[^ ]</span><span class="kw">)</span><span class="vs">'</span>, <span class="vs">r'</span><span class="ch">\1</span><span class="vs">-</span><span class="ch">\2</span><span class="vs">'</span>, akk2)</span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a><span class="co"># from a-&lt;i&gt;šú šá&lt;/i&gt; to a-&lt;i&gt;šú&lt;/i&gt; &lt;i&gt;šá&lt;/i&gt;</span></span>
-<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>pattern <span class="op">=</span> <span class="vs">r"</span><span class="kw">(</span><span class="vs">&lt;i&gt;</span><span class="pp">[^&lt;]</span><span class="op">*</span><span class="kw">)(</span><span class="pp">[ -]</span><span class="kw">)</span><span class="vs">"</span></span>
-<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
-<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>    new_text <span class="op">=</span> re.sub(pattern, <span class="vs">r"</span><span class="ch">\1</span><span class="vs">&lt;/i&gt;</span><span class="ch">\2</span><span class="vs">&lt;i&gt;"</span>, akk2)</span>
-<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> new_text <span class="op">==</span> akk2:  <span class="co"># End loop if there are no more differences between the existing one and the one created by re substitution</span></span>
-<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
-<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>    akk2 <span class="op">=</span> new_text</span>
-<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace double hyphens by simple ones</span></span>
-<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>akk2 <span class="op">=</span> akk2.replace(<span class="st">"--"</span>, <span class="st">"-"</span>)</span>
-<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(akk2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-30" class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse the CoNLL-U content</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Rules:</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   - Lines starting with '# global.columns' define the column names</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   - Lines starting with '# X...' mark the beginning of a new text</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   - All other non-empty lines are tab-separated token rows</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> []</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>current_text_id <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> akk2_conllu.strip().split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>):</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> line.strip()</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> line:</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> line.startswith(<span class="st">'# global.columns'</span>):</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>        columns <span class="op">=</span> line.split(<span class="st">' = '</span>)[<span class="dv">1</span>].split()</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> line.startswith(<span class="st">'# X'</span>) <span class="kw">and</span> <span class="st">' = '</span> <span class="kw">in</span> line:</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>        current_text_id <span class="op">=</span> line[<span class="dv">2</span>:].split(<span class="st">' = '</span>, <span class="dv">1</span>)[<span class="dv">0</span>].strip()</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="kw">not</span> line.startswith(<span class="st">'#'</span>) <span class="kw">and</span> <span class="st">'</span><span class="ch">\t</span><span class="st">'</span> <span class="kw">in</span> line:</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>        token <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(columns, line.split(<span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)))</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>        token[<span class="st">'text_id'</span>] <span class="op">=</span> current_text_id</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>        tokens.append(token)</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Columns (</span><span class="sc">{</span><span class="bu">len</span>(columns)<span class="sc">}</span><span class="ss">): </span><span class="sc">{</span>columns<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Text: </span><span class="sc">{</span>current_text_id<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Tokens: </span><span class="sc">{</span><span class="bu">len</span>(tokens)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'First 5 tokens:'</span>)</span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> tok <span class="kw">in</span> tokens[:<span class="dv">5</span>]:</span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  id=</span><span class="sc">{</span>tok[<span class="st">'id'</span>]<span class="sc">:&gt;3}</span><span class="ss">  form=</span><span class="sc">{</span>tok[<span class="st">'form'</span>]<span class="sc">:&lt;20}</span><span class="ss">  lemma=</span><span class="sc">{</span>tok[<span class="st">'lemma'</span>]<span class="sc">:&lt;15}</span><span class="ss">  upos=</span><span class="sc">{</span>tok[<span class="st">'upos'</span>]<span class="sc">:&lt;5}</span><span class="ss">  eng=</span><span class="sc">{</span>tok[<span class="st">'eng'</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-31" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:38:21.419364Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:38:21.399006Z&quot;}}" data-scrolled="true">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Create a dictionary with annotations</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>akk2_lineList <span class="op">=</span> akk2.split(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>lines_list <span class="op">=</span> []</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>line_count <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> akk2_lineList:</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    temp_words <span class="op">=</span> line.split()</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    line_dict <span class="op">=</span> {}</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    line_dict[<span class="st">'line_id'</span>] <span class="op">=</span> line_count</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    line_dict[<span class="st">'words'</span>] <span class="op">=</span> temp_words</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    lines_list.append(line_dict)</span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>    line_count <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="co">#print(lines_list)</span></span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> lines_list :</span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>    subword_list <span class="op">=</span> []</span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    word_count <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> word <span class="kw">in</span> line[<span class="st">'words'</span>] :</span>
-<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>        subword_dict <span class="op">=</span> {}</span>
-<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>        sign_list <span class="op">=</span> []</span>
-<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">'-'</span> <span class="kw">in</span> word: <span class="co"># if more than one sign, separated by hyphen</span></span>
-<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>            temp_signs <span class="op">=</span> word.split(<span class="st">'-'</span>)</span>
-<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a>            sign_list.extend(temp_signs)</span>
-<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> : <span class="co"># if only individual sign </span></span>
-<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a>            sign_list.append(word)</span>
-<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a>        signs_per_word <span class="op">=</span> []</span>
-<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> sign <span class="kw">in</span> sign_list :</span>
-<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a>            signs_per_word.append(sign)</span>
-<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-38"><a href="#cb25-38" aria-hidden="true" tabindex="-1"></a>        subword_dict[<span class="st">'word_id'</span>] <span class="op">=</span> word_count</span>
-<span id="cb25-39"><a href="#cb25-39" aria-hidden="true" tabindex="-1"></a>        word_count <span class="op">+=</span> <span class="dv">1</span>  </span>
-<span id="cb25-40"><a href="#cb25-40" aria-hidden="true" tabindex="-1"></a>        subword_dict[<span class="st">'signs'</span>] <span class="op">=</span> signs_per_word</span>
-<span id="cb25-41"><a href="#cb25-41" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-42"><a href="#cb25-42" aria-hidden="true" tabindex="-1"></a>        list_sign_func_dict <span class="op">=</span> []</span>
-<span id="cb25-43"><a href="#cb25-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> sign <span class="kw">in</span> subword_dict[<span class="st">'signs'</span>] :</span>
-<span id="cb25-44"><a href="#cb25-44" aria-hidden="true" tabindex="-1"></a>            sign_func_dict <span class="op">=</span> {}</span>
-<span id="cb25-45"><a href="#cb25-45" aria-hidden="true" tabindex="-1"></a>            <span class="co">#print(sign)</span></span>
-<span id="cb25-46"><a href="#cb25-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> sign.startswith(<span class="st">'&lt;i&gt;'</span>) <span class="kw">and</span> sign.endswith(<span class="st">'&lt;/i&gt;'</span>) :</span>
-<span id="cb25-47"><a href="#cb25-47" aria-hidden="true" tabindex="-1"></a>                sign_func_dict[<span class="st">'sign'</span>] <span class="op">=</span> sign[<span class="dv">3</span>:<span class="op">-</span><span class="dv">4</span>]</span>
-<span id="cb25-48"><a href="#cb25-48" aria-hidden="true" tabindex="-1"></a>                sign_func_dict[<span class="st">'sign_function'</span>] <span class="op">=</span> <span class="st">'phonogram'</span></span>
-<span id="cb25-49"><a href="#cb25-49" aria-hidden="true" tabindex="-1"></a>               <span class="co"># sign = </span></span>
-<span id="cb25-50"><a href="#cb25-50" aria-hidden="true" tabindex="-1"></a>            <span class="cf">elif</span> sign.startswith(<span class="st">'&lt;sup&gt;'</span>) <span class="kw">and</span> sign.endswith(<span class="st">'&lt;/sup&gt;'</span>) :</span>
-<span id="cb25-51"><a href="#cb25-51" aria-hidden="true" tabindex="-1"></a>                sign_func_dict[<span class="st">'sign'</span>] <span class="op">=</span> sign[<span class="dv">5</span>:<span class="op">-</span><span class="dv">6</span>]</span>
-<span id="cb25-52"><a href="#cb25-52" aria-hidden="true" tabindex="-1"></a>                sign_func_dict[<span class="st">'sign_function'</span>] <span class="op">=</span> <span class="st">'classifier'</span></span>
-<span id="cb25-53"><a href="#cb25-53" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb25-54"><a href="#cb25-54" aria-hidden="true" tabindex="-1"></a>                sign_func_dict[<span class="st">'sign'</span>] <span class="op">=</span> sign</span>
-<span id="cb25-55"><a href="#cb25-55" aria-hidden="true" tabindex="-1"></a>                sign_func_dict[<span class="st">'sign_function'</span>] <span class="op">=</span> <span class="st">'logogram'</span></span>
-<span id="cb25-56"><a href="#cb25-56" aria-hidden="true" tabindex="-1"></a>                </span>
-<span id="cb25-57"><a href="#cb25-57" aria-hidden="true" tabindex="-1"></a>            list_sign_func_dict.append(sign_func_dict)</span>
-<span id="cb25-58"><a href="#cb25-58" aria-hidden="true" tabindex="-1"></a>        <span class="co">#print(list_sign_func_dict)</span></span>
-<span id="cb25-59"><a href="#cb25-59" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-60"><a href="#cb25-60" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb25-61"><a href="#cb25-61" aria-hidden="true" tabindex="-1"></a>        subword_dict[<span class="st">'signs'</span>] <span class="op">=</span> list_sign_func_dict</span>
-<span id="cb25-62"><a href="#cb25-62" aria-hidden="true" tabindex="-1"></a>        subword_list.append(subword_dict)</span>
-<span id="cb25-63"><a href="#cb25-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-64"><a href="#cb25-64" aria-hidden="true" tabindex="-1"></a>    line[<span class="st">'words'</span>] <span class="op">=</span> subword_list</span>
-<span id="cb25-65"><a href="#cb25-65" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb25-66"><a href="#cb25-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-67"><a href="#cb25-67" aria-hidden="true" tabindex="-1"></a><span class="co">#print(lines_list)    </span></span>
-<span id="cb25-68"><a href="#cb25-68" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> lines_list:</span>
-<span id="cb25-69"><a href="#cb25-69" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line)</span>
-<span id="cb25-70"><a href="#cb25-70" aria-hidden="true" tabindex="-1"></a>    <span class="co">#for words in line:</span></span>
-<span id="cb25-71"><a href="#cb25-71" aria-hidden="true" tabindex="-1"></a>    <span class="co">#    print(line['words'])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-31" class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame — selecting only the columns relevant for linguistic analysis.</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the key principle for ALP: the source format may carry 17 fields,</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># but your research question determines which ones matter.</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we keep: form (transliteration), lemma, part-of-speech, and English gloss.</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We also flag lacunae (missing/damaged passages) explicitly.</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>selected <span class="op">=</span> [<span class="st">'text_id'</span>, <span class="st">'id'</span>, <span class="st">'form'</span>, <span class="st">'lemma'</span>, <span class="st">'xpos'</span>, <span class="st">'eng'</span>, <span class="st">'misc'</span>]</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>df_akk2 <span class="op">=</span> pd.DataFrame(tokens)[selected].copy()</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename for clarity</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>df_akk2.columns <span class="op">=</span> [<span class="st">'text_id'</span>, <span class="st">'token_id'</span>, <span class="st">'form'</span>, <span class="st">'lemma'</span>, <span class="st">'pos'</span>, <span class="st">'gloss_eng'</span>, <span class="st">'misc'</span>]</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Mark lacunae for easy filtering</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>df_akk2[<span class="st">'lacuna'</span>] <span class="op">=</span> df_akk2[<span class="st">'misc'</span>].<span class="bu">str</span>.contains(<span class="st">'lacuna'</span>, na<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>df_akk2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-32" class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save to our custom CSV format</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>output_cols <span class="op">=</span> [<span class="st">'text_id'</span>, <span class="st">'token_id'</span>, <span class="st">'form'</span>, <span class="st">'lemma'</span>, <span class="st">'pos'</span>, <span class="st">'gloss_eng'</span>, <span class="st">'lacuna'</span>]</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>df_akk2[output_cols].to_csv(<span class="st">'Achemenet_Strassmaier_Darius1.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Saved to Achemenet_Strassmaier_Darius1.csv'</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co"># What did we gain — and lose — by choosing this column selection?</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># What would you add for a study of verb morphology? Of personal names?</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Of commodity transactions?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="egyptian-example-2" class="level2">
-<h2 class="anchored" data-anchor-id="egyptian-example-2">Egyptian Example 2:</h2>
-<p>How to deal with non-Unicode hieroglyphs (<g> tag + Gardiner number)</g></p>
-<div id="cell-33" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:49.013299Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:49.013291Z&quot;}}" data-scrolled="true">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>eg2_csv <span class="op">=</span> <span class="st">""",text,line,word,ref,frag,norm,unicode_word,unicode,lemma_id,cf,pos,sense</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="st">92,3Z5EM77HJFCOPKZDDZFEMI6KVY,5,7,3Z5EM77HJFCOPKZDDZFEMI6KVY.5.7,gꜣu̯.w,gꜣu̯.w,&lt;g&gt;V96&lt;/g&gt;𓅱,"['&lt;', 'g', '&gt;', 'V', '9', '6', '&lt;', '/', 'g', '&gt;', '𓅱']",166210,gꜣu̯,VERB,eng sein; entbehren; (jmdn.) Not leiden lassen</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="st">151,4WVXFJZFLNAYHP3Y5O5SLWD7DA,2,2,4WVXFJZFLNAYHP3Y5O5SLWD7DA.2.2,nꜥw,nꜥw,𓈖𓂝𓅱&lt;g&gt;I14C&lt;/g&gt;𓏤,"['𓈖', '𓂝', '𓅱', '&lt;', 'g', '&gt;', 'I', '1', '4', 'C', '&lt;', '/', 'g', '&gt;', '𓏤']",80510,Nꜥw,PROPN,Sich windender (Personifikation der Schlange)</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="st">153,4WVXFJZFLNAYHP3Y5O5SLWD7DA,2,5,4WVXFJZFLNAYHP3Y5O5SLWD7DA.2.5,nꜥw,nꜥw,𓈖𓂝𓅱&lt;g&gt;I14C&lt;/g&gt;𓏤,"['𓈖', '𓂝', '𓅱', '&lt;', 'g', '&gt;', 'I', '1', '4', 'C', '&lt;', '/', 'g', '&gt;', '𓏤']",80510,Nꜥw,PROPN,Sich windender (Personifikation der Schlange)</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="st">200,67HZI45S3REA3LWVZOKJ6QJOIE,14,9,67HZI45S3REA3LWVZOKJ6QJOIE.14.9,nbi̯.n,nbi̯.n,𓈖𓎟𓃀&lt;g&gt;D107&lt;/g&gt;𓈖,"['𓈖', '𓎟', '𓃀', '&lt;', 'g', '&gt;', 'D', '1', '0', '7', '&lt;', '/', 'g', '&gt;', '𓈖']",82520,nbi̯,VERB,schmelzen; gießen</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="st">204,67HZI45S3REA3LWVZOKJ6QJOIE,14,13,67HZI45S3REA3LWVZOKJ6QJOIE.14.13,nḏr.n,nḏr.n,𓈖𓇦𓂋&lt;g&gt;U19A&lt;/g&gt;𓆱𓈖,"['𓈖', '𓇦', '𓂋', '&lt;', 'g', '&gt;', 'U', '1', '9', 'A', '&lt;', '/', 'g', '&gt;', '𓆱', '𓈖']",91630,nḏr,VERB,(Holz) bearbeiten; zimmern</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="st">206,67HZI45S3REA3LWVZOKJ6QJOIE,14,15,67HZI45S3REA3LWVZOKJ6QJOIE.14.15,b(w)n.wDU,bwn.wDU,𓃀𓈖𓏌𓅱&lt;g&gt;T86&lt;/g&gt;&lt;g&gt;T86&lt;/g&gt;,"['𓃀', '𓈖', '𓏌', '𓅱', '&lt;', 'g', '&gt;', 'T', '8', '6', '&lt;', '/', 'g', '&gt;', '&lt;', 'g', '&gt;', 'T', '8', '6', '&lt;', '/', 'g', '&gt;']",55330,bwn,NOUN,Speerspitzen (des Fischspeeres)</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="egyptian-example-2-under-revision" class="level2">
+<h2 class="anchored" data-anchor-id="egyptian-example-2-under-revision">Egyptian Example 2 (under revision)</h2>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> This example demonstrates how to handle non-Unicode hieroglyphs using Gardiner sign numbers embedded with <code>&lt;g&gt;</code> tags in a custom CSV export from the Thesaurus Linguae Aegyptiae (TLA). <strong>This section is currently being revised by the course instructors</strong> to reflect the latest TLA data structure. The original cells are preserved below for reference.</p>
+</blockquote>
+<div id="cell-34" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:49.013299Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:49.013291Z&quot;}}" data-scrolled="true">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>eg2_csv <span class="op">=</span> <span class="st">""",text,line,word,ref,frag,norm,unicode_word,unicode,lemma_id,cf,pos,sense</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="st">92,3Z5EM77HJFCOPKZDDZFEMI6KVY,5,7,3Z5EM77HJFCOPKZDDZFEMI6KVY.5.7,gꜣu̯.w,gꜣu̯.w,&lt;g&gt;V96&lt;/g&gt;𓅱,"['&lt;', 'g', '&gt;', 'V', '9', '6', '&lt;', '/', 'g', '&gt;', '𓅱']",166210,gꜣu̯,VERB,eng sein; entbehren; (jmdn.) Not leiden lassen</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="st">151,4WVXFJZFLNAYHP3Y5O5SLWD7DA,2,2,4WVXFJZFLNAYHP3Y5O5SLWD7DA.2.2,nꜥw,nꜥw,𓈖𓂝𓅱&lt;g&gt;I14C&lt;/g&gt;𓏤,"['𓈖', '𓂝', '𓅱', '&lt;', 'g', '&gt;', 'I', '1', '4', 'C', '&lt;', '/', 'g', '&gt;', '𓏤']",80510,Nꜥw,PROPN,Sich windender (Personifikation der Schlange)</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="st">153,4WVXFJZFLNAYHP3Y5O5SLWD7DA,2,5,4WVXFJZFLNAYHP3Y5O5SLWD7DA.2.5,nꜥw,nꜥw,𓈖𓂝𓅱&lt;g&gt;I14C&lt;/g&gt;𓏤,"['𓈖', '𓂝', '𓅱', '&lt;', 'g', '&gt;', 'I', '1', '4', 'C', '&lt;', '/', 'g', '&gt;', '𓏤']",80510,Nꜥw,PROPN,Sich windender (Personifikation der Schlange)</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="st">200,67HZI45S3REA3LWVZOKJ6QJOIE,14,9,67HZI45S3REA3LWVZOKJ6QJOIE.14.9,nbi̯.n,nbi̯.n,𓈖𓎟𓃀&lt;g&gt;D107&lt;/g&gt;𓈖,"['𓈖', '𓎟', '𓃀', '&lt;', 'g', '&gt;', 'D', '1', '0', '7', '&lt;', '/', 'g', '&gt;', '𓈖']",82520,nbi̯,VERB,schmelzen; gießen</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="st">204,67HZI45S3REA3LWVZOKJ6QJOIE,14,13,67HZI45S3REA3LWVZOKJ6QJOIE.14.13,nḏr.n,nḏr.n,𓈖𓇦𓂋&lt;g&gt;U19A&lt;/g&gt;𓆱𓈖,"['𓈖', '𓇦', '𓂋', '&lt;', 'g', '&gt;', 'U', '1', '9', 'A', '&lt;', '/', 'g', '&gt;', '𓆱', '𓈖']",91630,nḏr,VERB,(Holz) bearbeiten; zimmern</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="st">206,67HZI45S3REA3LWVZOKJ6QJOIE,14,15,67HZI45S3REA3LWVZOKJ6QJOIE.14.15,b(w)n.wDU,bwn.wDU,𓃀𓈖𓏌𓅱&lt;g&gt;T86&lt;/g&gt;&lt;g&gt;T86&lt;/g&gt;,"['𓃀', '𓈖', '𓏌', '𓅱', '&lt;', 'g', '&gt;', 'T', '8', '6', '&lt;', '/', 'g', '&gt;', '&lt;', 'g', '&gt;', 'T', '8', '6', '&lt;', '/', 'g', '&gt;']",55330,bwn,NOUN,Speerspitzen (des Fischspeeres)</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-34" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:49.014542Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:49.014528Z&quot;}}" data-scrolled="true">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> StringIO</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the string into a StringIO object</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co"># This is only necessary because we presented the csv as a string not as a file that is loaded into the notebook</span></span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>csv_data <span class="op">=</span> StringIO(eg2_csv)</span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the data into a pandas DataFrame</span></span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(csv_data)</span>
-<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the DataFrame</span></span>
-<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-35" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:49.014542Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:49.014528Z&quot;}}" data-scrolled="true">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> StringIO</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the string into a StringIO object</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co"># This is only necessary because we presented the csv as a string not as a file that is loaded into the notebook</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>csv_data <span class="op">=</span> StringIO(eg2_csv)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the data into a pandas DataFrame</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(csv_data)</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the DataFrame</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-35" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:49.015676Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:49.015667Z&quot;}}" data-scrolled="true">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> split_tags(text):</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    parts <span class="op">=</span> []  <span class="co"># List to collect output of the function</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="st">'&lt;g&gt;'</span> <span class="kw">in</span> text <span class="kw">and</span> <span class="st">'&lt;/g&gt;'</span> <span class="kw">in</span> text:</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>        pre, rest <span class="op">=</span> text.split(<span class="st">'&lt;g&gt;'</span>, <span class="dv">1</span>)  <span class="co"># splits at the first &lt;g&gt; found</span></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>        tag_content, post <span class="op">=</span> rest.split(<span class="st">'&lt;/g&gt;'</span>, <span class="dv">1</span>)  <span class="co"># splits the rest at the first &lt;/g&gt; found</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># adds elements before the first &lt;g&gt;&lt;/g&gt; tag to the List</span></span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>        parts.extend(pre)</span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">#  adds element inside the first &lt;g&gt;&lt;/g&gt; tag to the List</span></span>
-<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>        parts.append(tag_content)</span>
-<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># text variable is set to remaining text</span></span>
-<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> post</span>
-<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># After last tag found, the remainder of the text is split and added to the List</span></span>
-<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>    parts.extend(text)</span>
-<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> parts</span>
-<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_text(text):</span>
-<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(text): <span class="co"># deals with NaN</span></span>
-<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> []</span>
-<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> split_tags(text)</span>
-<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a><span class="co"># apply functions to every row of the column 'unicode_word'</span></span>
-<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'unicode_splitted'</span>] <span class="op">=</span> df[<span class="st">'unicode_word'</span>].<span class="bu">apply</span>(process_text)</span>
-<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a><span class="co"># delete obsolete column</span></span>
-<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a>df.drop(<span class="st">'unicode'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>df</span>
-<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a><span class="co">#df.to_csv("EG-TLA-example.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-36" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-05-01T09:02:49.015676Z&quot;,&quot;start_time&quot;:&quot;2024-05-01T09:02:49.015667Z&quot;}}" data-scrolled="true">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> split_tags(text):</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    parts <span class="op">=</span> []  <span class="co"># List to collect output of the function</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="st">'&lt;g&gt;'</span> <span class="kw">in</span> text <span class="kw">and</span> <span class="st">'&lt;/g&gt;'</span> <span class="kw">in</span> text:</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        pre, rest <span class="op">=</span> text.split(<span class="st">'&lt;g&gt;'</span>, <span class="dv">1</span>)  <span class="co"># splits at the first &lt;g&gt; found</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>        tag_content, post <span class="op">=</span> rest.split(<span class="st">'&lt;/g&gt;'</span>, <span class="dv">1</span>)  <span class="co"># splits the rest at the first &lt;/g&gt; found</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># adds elements before the first &lt;g&gt;&lt;/g&gt; tag to the List</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>        parts.extend(pre)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">#  adds element inside the first &lt;g&gt;&lt;/g&gt; tag to the List</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>        parts.append(tag_content)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># text variable is set to remaining text</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> post</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># After last tag found, the remainder of the text is split and added to the List</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>    parts.extend(text)</span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> parts</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_text(text):</span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(text): <span class="co"># deals with NaN</span></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> []</span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> split_tags(text)</span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="co"># apply functions to every row of the column 'unicode_word'</span></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'unicode_splitted'</span>] <span class="op">=</span> df[<span class="st">'unicode_word'</span>].<span class="bu">apply</span>(process_text)</span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a><span class="co"># delete obsolete column</span></span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>df.drop(<span class="st">'unicode'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>df</span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a><span class="co">#df.to_csv("EG-TLA-example.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="hittite-example-1-tlhdig-administrative-letters-simtex-xml-format" class="level2">
+<h2 class="anchored" data-anchor-id="hittite-example-1-tlhdig-administrative-letters-simtex-xml-format">Hittite Example 1: TLHdig Administrative Letters (SimTex XML format)</h2>
+<p>The <em>Thesaurus Linguarum Hethaeorum digitalis</em> (TLHdig) is a digital repository containing transliterations of more than 98% of all published Hittite cuneiform fragments. Published on Zenodo:</p>
+<blockquote class="blockquote">
+<p>TLHdig Project Team (2025). <em>Thesaurus Linguarum Hethaeorum digitalis (TLHdig) Beta Version 0.2</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.15459133">https://doi.org/10.5281/zenodo.15459133</a></p>
+</blockquote>
+<p>Each tablet is a separate <strong>XML</strong> file, organised in folders by CTH number (the standard Hittite text catalogue). The format is called <em>SimTex</em>. Its key structural elements are:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 70%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Element / Attribute</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&lt;AOxml&gt;</code></td>
+<td>Root element (multiple namespaces)</td>
+</tr>
+<tr class="even">
+<td><code>&lt;AOHeader&gt;&lt;docID&gt;</code></td>
+<td>Tablet identifier (e.g.&nbsp;<code>HKM 9</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;lb lnr="..." lg="..." cu="..."/&gt;</code></td>
+<td>Line: number, language code, cuneiform Unicode</td>
+</tr>
+<tr class="even">
+<td><code>&lt;w trans="..." mrp0sel="..." mrp1="..."&gt;</code></td>
+<td>Word: normalised transliteration; morphological parsing</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;sGr&gt;</code></td>
+<td>Sumerogram</td>
+</tr>
+<tr class="even">
+<td><code>&lt;d&gt;</code></td>
+<td>Determinative</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;aGr&gt;</code></td>
+<td>Akkadogram</td>
+</tr>
+<tr class="even">
+<td><code>&lt;del_fin/&gt;</code> / <code>&lt;del_in/&gt;</code></td>
+<td>Start / end of damaged section</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;parsep/&gt;</code></td>
+<td>Paragraph separator</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>mrp1</code> attribute encodes morphological information in a single <code>@</code>-delimited string: <code>lemma@German_meaning@morphological_form@HZL_reference@</code>. For example: <code>"uwa=te-@(her)bringen@3PL.PST@I.6.1@"</code> → lemma <code>uwa=te-</code>, meaning <em>bring (here)</em>, form <code>3PL.PST</code>.</p>
+<p>We work with <strong>CTH 186</strong> — the administrative letters from Maşat Höyük (ancient Tapika), 13th century BCE. These are short, well-preserved royal correspondence tablets, ideal for learning to navigate a complex XML structure.</p>
+<p><strong>Task:</strong> Parse the XML of tablet <strong>HKM 9</strong>, extract lines and words, and produce a DataFrame that includes line number, language, cuneiform Unicode, transliteration, and the first morphological parsing option.</p>
+<div id="cell-39" class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># HKM 9 — CTH 186 (Hittite administrative letter, Maşat Höyük, 13th c. BCE)</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Source: TLHdig Beta 0.2, Zenodo https://doi.org/10.5281/zenodo.15459133</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># To download the full archive and extract this file in Colab:</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   import requests, zipfile, io</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   url = 'https://zenodo.org/api/records/15459134/files/TLHdig_0.2.0-beta.zip/content'</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   r = requests.get(url, stream=True)</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   with open('TLHdig.zip', 'wb') as f:</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="co">#       for chunk in r.iter_content(8192): f.write(chunk)</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   z = zipfile.ZipFile('TLHdig.zip')</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="co">#   xml_str = z.read('TLHbasisONLINE25.1_ZENODO/CTH 186_XML/HKM 9.xml').decode('utf-8')</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="co"># The XML is embedded below for a self-contained notebook.</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>hkm9_xml <span class="op">=</span> <span class="st">"""&lt;?xml-stylesheet href="HPMxml.css" type="text/css"?&gt;&lt;AOxml xmlns:hpm="http://hethiter.net/ns/hpm/1.0" xmlns:AO="http://hethiter.net/ns/AO/1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" &gt;&lt;AOHeader&gt;&lt;docID&gt;HKM 9&lt;/docID&gt;&lt;meta&gt;&lt;creation-date date="2016-04-15T16:55:36.58"/&gt;&lt;kor2 date="2023-07-26T16:00:33"/&gt;&lt;AOxml-creation date="2023-07-26T16:00:33"/&gt;&lt;annotation&gt; &lt;annot editor="auto" date=""/&gt; &lt;annot editor="" date=""/&gt;&lt;/annotation&gt;&lt;/meta&gt;&lt;/AOHeader&gt;&lt;body&gt; &lt;div1 type="transliteration"&gt; &lt;text xml:lang="Hit"&gt;</span></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;AO:Manuscripts&gt;&lt;AO:TxtPubl&gt;HKM 9&lt;/AO:TxtPubl&gt; &lt;/AO:Manuscripts&gt;</span></span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a><span class="st"> </span></span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;lb txtid="HKM 9" lnr="Vs. 1" lg="Hit" cu="𒀍𒈨𒀹𒉓𒉆𒈨"/&gt; &lt;w trans="UM-MA" mrp0sel=" 1 " mrp1="UMMA@folgendermaßen@ADV@@ " &gt;&lt;aGr&gt;UM-MA&lt;/aGr&gt;&lt;/w&gt; &lt;w trans="UTU-ŠI-MA" mrp0sel=" " mrp1="UTU-ŠI-MA@'Meine Sonne'@{a → NOM.SG(UNM)_QUOT}@@ D" &gt;&lt;d&gt;D&lt;/d&gt;&lt;sGr&gt;UTU&lt;/sGr&gt;&lt;aGr&gt;-ŠI-MA&lt;/aGr&gt;&lt;/w&gt; </span></span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;lb txtid="HKM 9" lnr="Vs. 2" lg="Hit" cu="𒀋𒈮𒀹𒉆𒀸𒉓𒌑𒋔𒈪𒈨"/&gt; &lt;w trans="A-NA kaššu" mrp0sel=" " mrp1="kašš=u-@Kaš(š)u@{ a → ...:D/L.SG}@38.4@m"&gt;&lt;aGr&gt;A-NA&lt;/aGr&gt; &lt;d&gt;m&lt;/d&gt;ka-aš-šu-ú&lt;/w&gt; &lt;w trans="QÍ-BÍ-MA" mrp0sel=" 1 " mrp1="QABÛ@sagen@2SG.IMP_CNJ@@ " &gt;&lt;aGr&gt;QÍ-BÍ-MA&lt;/aGr&gt;&lt;/w&gt; &lt;parsep/&gt; </span></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;lb txtid="HKM 9" lnr="Vs. 3" lg="Hit" cu="𒀋𒀹𒀹𒀹𒆿𒇈𒈭𒃁𒇴𒀹𒆲𒉓𒇇"/&gt; &lt;w trans="13" mrp0sel=" 1 " mrp1="13@13@@ QUANcar@" &gt;&lt;num&gt;13&lt;/num&gt;&lt;/w&gt; &lt;w trans="pitteantukan" mrp0sel="???" &gt;&lt;d&gt;LÚ.MEŠ&lt;/d&gt;pít-te-an-du-uš-kán&lt;/w&gt; </span></span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;lb txtid="HKM 9" lnr="Vs. 4" lg="Hit" cu="𒂉𒀉𒆺𒈯𒀋𒋮𒀉𒇫"/&gt; &lt;w trans="kuit" mrp0sel=" " mrp1="kui-@welcher@{ a → REL.NOM.SG.N}@22@" mrp3="kuit@weil@@ CNJ@" &gt;ku-it&lt;/w&gt; &lt;w trans="para" mrp0sel=" " mrp1="parā@außerdem@@ ADV@" &gt;pa-ra-a&lt;/w&gt; &lt;w trans="naitta" mrp0sel=" " mrp1="n=ai-@(sich) drehen@{ a → 3SG.PST}@II.6.3@" &gt;na-it-ta&lt;/w&gt; </span></span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;lb txtid="HKM 9" lnr="Vs. 5" lg="Hit" cu="𒈮𒀋𒌑𒇿𒇴𒉕"/&gt; &lt;w trans="naš" mrp0sel=" " mrp1="n=aš@@ { a → CONNn=PPRO.3SG.C.NOM}@@ " &gt;na-aš&lt;/w&gt; &lt;w trans="uater" mrp0sel=" 1 " mrp1="uwa=te-@(her)bringen@3PL.PST@I.6.1@" &gt;ú-wa-te-er&lt;/w&gt; &lt;parsep/&gt; </span></span>
+<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;lb txtid="HKM 9" lnr="Vs. 6" lg="Hit" cu="𒈪𒀏𒊳𒈯𒆫𒀋▲𒈨𒊈"/&gt; &lt;w trans="ŠA ANŠE.KUR.RAmamu" mrp0sel=" " mrp1="ANŠE.KUR.RA@Pferd@{ a → ...:GEN.SG}@28.3.1.1@" &gt;&lt;aGr&gt;ŠA&lt;/aGr&gt; &lt;sGr&gt;ANŠE.KUR.RA&lt;/sGr&gt;&lt;d&gt;ḤI.A&lt;/d&gt;-ma-mu&lt;/w&gt; </span></span>
+<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;lb txtid="HKM 9" lnr="Vs. 7" lg="Hit" cu="𒂉𒀉𒉓𒈯𒆩𒀍𒈯𒀋𒈭"/&gt; &lt;w trans="kuit" mrp0sel=" " mrp1="kui-@welcher@{ a → REL.NOM.SG.N}@22@" &gt;ku-it&lt;/w&gt; &lt;w trans="uttar" mrp0sel=" " mrp1="udd=ar@Wort; Sache@{ a → NOM.SG.N}@14.1.1@" &gt;ut-tar&lt;/w&gt; &lt;w trans="ḥatrais" mrp0sel=" 1 " mrp1="ḥatr=ā(e)-@mitteilen@2SG.PST@I.9@" &gt;ḥa-at-ra-a-eš&lt;/w&gt; </span></span>
+<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;lb txtid="HKM 9" lnr="u. Rd. 8" lg="Hit" cu="𒈮𒀍𒀋𒇈"/&gt; &lt;w trans="nat" mrp0sel=" " mrp1="n=at@@ { a → CONNn=PPRO.3SG.N.NOM}@@ " &gt;na-at&lt;/w&gt; &lt;w trans="AŠ-ME" mrp0sel=" 1 " mrp1="ŠEMÛ@hören@1SG.PST@@ " &gt;&lt;aGr&gt;AŠ-ME&lt;/aGr&gt;&lt;/w&gt; &lt;parsep/&gt; </span></span>
+<span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;gap t="line" c="Textende"/&gt; </span></span>
+<span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/text&gt;&lt;/div1&gt;&lt;/body&gt;&lt;/AOxml&gt;"""</span></span>
+<span id="cb30-29"><a href="#cb30-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hkm9_xml[:<span class="dv">600</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-40" class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse the XML with Python's built-in ElementTree module.</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The SimTex format uses multiple XML namespaces; we register them</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># so we can use short prefixes in our XPath queries.</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xml.etree.ElementTree <span class="im">as</span> ET</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>NS <span class="op">=</span> {</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'AO'</span>:   <span class="st">'http://hethiter.net/ns/AO/1.0'</span>,</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hpm'</span>:  <span class="st">'http://hethiter.net/ns/hpm/1.0'</span>,</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'dc'</span>:   <span class="st">'http://purl.org/dc/elements/1.1/'</span>,</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> ET.fromstring(hkm9_xml)</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract document ID from the header</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>doc_id <span class="op">=</span> root.find(<span class="st">'AOHeader/docID'</span>).text</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Document: </span><span class="sc">{</span>doc_id<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a><span class="co"># The text content lives in body &gt; div1 &gt; text</span></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>text_node <span class="op">=</span> root.find(<span class="st">'body/div1/text'</span>)</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>lang <span class="op">=</span> text_node.get(<span class="st">'{http://www.w3.org/XML/1998/namespace}lang'</span>, <span class="st">'unknown'</span>)</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Primary language: </span><span class="sc">{</span>lang<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Count lines and words</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> text_node.findall(<span class="st">'lb'</span>)</span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> text_node.findall(<span class="st">'w'</span>)</span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Lines: </span><span class="sc">{</span><span class="bu">len</span>(lines)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Words: </span><span class="sc">{</span><span class="bu">len</span>(words)<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-41" class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract lines and words into a structured list.</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Strategy: iterate the children of &lt;text&gt; in document order.</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># When we hit a &lt;lb/&gt; tag we update the current line context;</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co"># when we hit a &lt;w&gt; tag we harvest its data.</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_inner_text(w_elem):</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Concatenate all text content inside a &lt;w&gt; element, stripping child tags."""</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    parts <span class="op">=</span> [w_elem.text <span class="kw">or</span> <span class="st">''</span>]</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> child <span class="kw">in</span> w_elem:</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>        parts.append(child.text <span class="kw">or</span> <span class="st">''</span>)</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>        parts.append(child.tail <span class="kw">or</span> <span class="st">''</span>)</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">''</span>.join(parts).strip()</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parse_mrp(mrp_str):</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Extract lemma and morphological form from an mrp1 attribute string.</span></span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a><span class="co">    Format: lemma@German_meaning@morphological_form@HZL_ref@</span></span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> mrp_str:</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span></span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>    parts <span class="op">=</span> mrp_str.split(<span class="st">'@'</span>)</span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>    lemma   <span class="op">=</span> parts[<span class="dv">0</span>].strip() <span class="cf">if</span> <span class="bu">len</span>(parts) <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">''</span></span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>    meaning <span class="op">=</span> parts[<span class="dv">1</span>].strip() <span class="cf">if</span> <span class="bu">len</span>(parts) <span class="op">&gt;</span> <span class="dv">1</span> <span class="cf">else</span> <span class="st">''</span></span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>    morph   <span class="op">=</span> parts[<span class="dv">2</span>].strip() <span class="cf">if</span> <span class="bu">len</span>(parts) <span class="op">&gt;</span> <span class="dv">2</span> <span class="cf">else</span> <span class="st">''</span></span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> lemma, meaning, morph</span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a>current_lnr <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a>current_lg  <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a>current_cu  <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> child <span class="kw">in</span> text_node:</span>
+<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a>    tag <span class="op">=</span> child.tag</span>
+<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> tag <span class="op">==</span> <span class="st">'lb'</span>:</span>
+<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a>        current_lnr <span class="op">=</span> child.get(<span class="st">'lnr'</span>, <span class="st">''</span>)</span>
+<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a>        current_lg  <span class="op">=</span> child.get(<span class="st">'lg'</span>, <span class="st">''</span>)</span>
+<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a>        current_cu  <span class="op">=</span> child.get(<span class="st">'cu'</span>, <span class="st">''</span>)</span>
+<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> tag <span class="op">==</span> <span class="st">'w'</span>:</span>
+<span id="cb32-41"><a href="#cb32-41" aria-hidden="true" tabindex="-1"></a>        trans    <span class="op">=</span> child.get(<span class="st">'trans'</span>, <span class="st">''</span>).strip()</span>
+<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a>        mrp0sel  <span class="op">=</span> child.get(<span class="st">'mrp0sel'</span>, <span class="st">''</span>).strip()</span>
+<span id="cb32-43"><a href="#cb32-43" aria-hidden="true" tabindex="-1"></a>        mrp1_raw <span class="op">=</span> child.get(<span class="st">'mrp1'</span>, <span class="st">''</span>)</span>
+<span id="cb32-44"><a href="#cb32-44" aria-hidden="true" tabindex="-1"></a>        lemma, meaning, morph <span class="op">=</span> parse_mrp(mrp1_raw)</span>
+<span id="cb32-45"><a href="#cb32-45" aria-hidden="true" tabindex="-1"></a>        syllabic <span class="op">=</span> get_inner_text(child)</span>
+<span id="cb32-46"><a href="#cb32-46" aria-hidden="true" tabindex="-1"></a>        rows.append({</span>
+<span id="cb32-47"><a href="#cb32-47" aria-hidden="true" tabindex="-1"></a>            <span class="st">'doc_id'</span>:    doc_id,</span>
+<span id="cb32-48"><a href="#cb32-48" aria-hidden="true" tabindex="-1"></a>            <span class="st">'line'</span>:      current_lnr,</span>
+<span id="cb32-49"><a href="#cb32-49" aria-hidden="true" tabindex="-1"></a>            <span class="st">'language'</span>:  current_lg,</span>
+<span id="cb32-50"><a href="#cb32-50" aria-hidden="true" tabindex="-1"></a>            <span class="st">'cuneiform'</span>: current_cu,</span>
+<span id="cb32-51"><a href="#cb32-51" aria-hidden="true" tabindex="-1"></a>            <span class="st">'transliteration'</span>: trans <span class="cf">if</span> trans <span class="cf">else</span> syllabic,</span>
+<span id="cb32-52"><a href="#cb32-52" aria-hidden="true" tabindex="-1"></a>            <span class="st">'syllabic'</span>:  syllabic,</span>
+<span id="cb32-53"><a href="#cb32-53" aria-hidden="true" tabindex="-1"></a>            <span class="st">'lemma'</span>:     lemma,</span>
+<span id="cb32-54"><a href="#cb32-54" aria-hidden="true" tabindex="-1"></a>            <span class="st">'meaning'</span>:   meaning,</span>
+<span id="cb32-55"><a href="#cb32-55" aria-hidden="true" tabindex="-1"></a>            <span class="st">'morphology'</span>:morph,</span>
+<span id="cb32-56"><a href="#cb32-56" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb32-57"><a href="#cb32-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-58"><a href="#cb32-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Extracted </span><span class="sc">{</span><span class="bu">len</span>(rows)<span class="sc">}</span><span class="ss"> word tokens'</span>)</span>
+<span id="cb32-59"><a href="#cb32-59" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> rows[:<span class="dv">5</span>]:</span>
+<span id="cb32-60"><a href="#cb32-60" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  line=</span><span class="sc">{</span>row[<span class="st">'line'</span>]<span class="sc">:&lt;12}</span><span class="ss"> trans=</span><span class="sc">{</span>row[<span class="st">'transliteration'</span>]<span class="sc">:&lt;25}</span><span class="ss"> lemma=</span><span class="sc">{</span>row[<span class="st">'lemma'</span>]<span class="sc">:&lt;20}</span><span class="ss"> morph=</span><span class="sc">{</span>row[<span class="st">'morphology'</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-42" class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>df_hit <span class="op">=</span> pd.DataFrame(rows)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_hit.to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Save to our custom CSV format</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>df_hit.to_csv(<span class="st">'TLHdig_HKM9_CTH186.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Saved to TLHdig_HKM9_CTH186.csv'</span>)</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Discussion questions:</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="co"># - What information is in the &lt;w&gt; element that we did NOT capture?</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="co"># - How would you handle the determinatives (&lt;d&gt;) and Sumerograms (&lt;sGr&gt;)</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="co">#   if you needed to distinguish them in your analysis?</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a><span class="co"># - The mrp1 attribute gives a German meaning. What challenges does that</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   create for an English-language research workflow?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

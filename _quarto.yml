@@ -13,16 +13,8 @@ website:
         href: about.qmd
       - text: "Coursework"
         href: coursework.qmd
-      - text: "Code Notebooks"  
-        menu: 
-          - text: "Notebooks"
-            href: notebooks/index.qmd
-          - text: "Colab Intro"
-            href: notebooks/01_colab_intro.ipynb
-          - text: "Python Brush up"
-            href: notebooks/02_Python_Brush_up.ipynb
-          - text: "Vectorizing Texts"
-            href: notebooks/03_VectorizingTexts.ipynb
+      - text: "Code Notebooks"
+        href: notebooks/index.qmd
       - text: "Materials and Texts"
         href: resources.qmd
         

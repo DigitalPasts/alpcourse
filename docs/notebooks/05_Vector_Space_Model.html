@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro – Ancient Language Processing 2026 / Gordin and Lincke</title>
+<title>vector_space_model – Ancient Language Processing / Gordin and Lincke</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,9 +111,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Intro – Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:title" content="Ancient Language Processing / Gordin and Lincke">
 <meta property="og:description" content="">
-<meta property="og:site_name" content="Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:site_name" content="Ancient Language Processing / Gordin and Lincke">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -127,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <img src="../digpasts_logo.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Ancient Language Processing 2026 / Gordin and Lincke</span>
+    <span class="navbar-title">Ancient Language Processing / Gordin and Lincke</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -144,29 +144,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../coursework.html"> 
 <span class="menu-text">Coursework</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code-notebooks" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Code Notebooks</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-code-notebooks">    
-        <li>
-    <a class="dropdown-item" href="../notebooks/index.html">
- <span class="dropdown-text">Notebooks</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/index.html"> 
+<span class="menu-text">Code Notebooks</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/01_colab_intro.html">
- <span class="dropdown-text">Colab Intro</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/02_Python_Brush_up.html">
- <span class="dropdown-text">Python Brush up</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/03_VectorizingTexts.html">
- <span class="dropdown-text">Vectorizing Texts</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Materials and Texts</span></a>
@@ -192,7 +173,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preprocessing-the-corpus" id="toc-preprocessing-the-corpus" class="nav-link active" data-scroll-target="#preprocessing-the-corpus">Preprocessing the corpus</a>
+  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro">Intro</a></li>
+  <li><a href="#preprocessing-the-corpus" id="toc-preprocessing-the-corpus" class="nav-link" data-scroll-target="#preprocessing-the-corpus">Preprocessing the corpus</a>
   <ul class="collapse">
   <li><a href="#imports" id="toc-imports" class="nav-link" data-scroll-target="#imports">Imports</a></li>
   <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a>
@@ -210,35 +192,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Intro</h1>
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/DigitalPasts/alpcourse/blob/main/notebooks/05_Vector_Space_Model.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="intro" class="level1">
+<h1>Intro</h1>
 <p>In this notebook, we explore a collection of ancient Akkadian and ancient Egyptian texts using the vector space model approach described by <a href="https://www.humanitiesdataanalysis.org/vector-space-model/notebook.html">Karsdorp et al.&nbsp;in the chapter “Exploring Texts using the Vector Space Model”</a>. By representing the texts as numeric vectors capturing word frequencies, we can quantify the lexical similarities and differences between corpora in each of these two ancient languages. The vector space model allows us to reason about texts spatially and apply geometric concepts like distance metrics to assess how “close” texts are to each other based on shared vocabulary.</p>
 <p>We preprocess the texts by tokenizing them into words, constructing a document-term matrix recording word frequencies per text, and analyzing the matrix using tools from the Python scientific computing stack, including NumPy, SciPy and Scikit-learn. Through techniques like tSNE (t-Distributed Stochastic Neighbor Embedding) and aggregation by text metadata like script type, language or genre, we explore patterns in the Akkadian and Egyptian corpora and showcase how the vector space model can yield quantitative insights into ancient textual data. The notebook serves as an example application of the concepts and methods covered in depth by Karsdorp et al.&nbsp;in their chapter.</p>
 <p>This notebook has been prepared by <strong>Avital Romach</strong> and is based on her research. It should be cited accordingly (see citation information at the bottom).</p>
+</section>
 <section id="preprocessing-the-corpus" class="level1">
 <h1>Preprocessing the corpus</h1>
 <section id="imports" class="level2">
 <h2 class="anchored" data-anchor-id="imports">Imports</h2>
-<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385519760,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:11229,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="1">
+<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:11229,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385519760,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -258,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="functions-and-import-for-the-akkadian-corpus" class="level4">
 <h4 class="anchored" data-anchor-id="functions-and-import-for-the-akkadian-corpus">Functions and import for the <strong>Akkadian</strong> corpus</h4>
 <p>The Akkadian corpus consists of a part of the <em><a href="https://colab.research.google.com/drive/14hTZCg-9XyiireusajDQqc9k2GAbc82e#scrollTo=qUcbzacX0kJy&amp;line=3&amp;uniqifier=1">Royal Inscriptions of the Neo-Assyrian Period (RINAP)</a></em>, licensed CC-BY-SA, and was taken from Open Richely Annotated Cuneiform Corpus (ORACC).</p>
-<div id="cell-8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385633433,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:238,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="8">
+<div id="cell-8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:238,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385633433,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_corpus_from_github_api(url):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># URL on the Github where the csv files are stored</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  github_url <span class="op">=</span> url</span>
@@ -282,13 +257,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  metadata <span class="op">=</span> pd.read_csv(url, encoding<span class="op">=</span><span class="st">"utf-8"</span>, index_col<span class="op">=</span><span class="st">"Unnamed: 0"</span>).fillna(<span class="st">""</span>)</span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> metadata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385790185,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:122495,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="10">
+<div id="cell-9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:122495,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385790185,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare Akkadian corpus (list of dataframes)</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>corpus <span class="op">=</span> create_corpus_from_github_api(<span class="st">'https://api.github.com/repos/DigitalPasts/ALP-course/contents/course_notebooks/data/rinap01'</span>)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>corpus.extend(create_corpus_from_github_api(<span class="st">'https://api.github.com/repos/DigitalPasts/ALP-course/contents/course_notebooks/data/rinap05'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385803244,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:723,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="11">
+<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:723,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385803244,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare Akkadian metadata</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>metadata <span class="op">=</span> get_metadata_from_raw_github(<span class="st">"https://raw.githubusercontent.com/DigitalPasts/ALP-course/master/course_notebooks/data/rinap1_5_metadata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -296,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="functions-and-import-for-the-egyptian-corpus" class="level4">
 <h4 class="anchored" data-anchor-id="functions-and-import-for-the-egyptian-corpus">Functions and import for the <strong>Egyptian</strong> corpus</h4>
 <p>The Egyptian corpus is an extract of the database of the <em><a href="https://thesaurus-linguae-aegyptiae.de">Thesaurus Linguae Aegyptiae (TLA)</a></em>, containing literary (and if you like: medical) texts. This export from the database is not published under a free license. Therefore, we access it from a private GitHub repository using an access token.</p>
-<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385519760,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="5">
+<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385519760,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_corpus_from_private_github_api(url, token):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># URL on the Github where the csv files are stored</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    headers <span class="op">=</span> {</span>
@@ -336,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="ss">f"Failed to retrieve metadata: </span><span class="sc">{</span>response<span class="sc">.</span>status_code<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d29f230d-0cd6-458b-cb15-4c0d29b87aee" data-execution_count="6">
+<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:504,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385520262,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="d29f230d-0cd6-458b-cb15-4c0d29b87aee" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># only if corpus is not yet loaded</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare Egyptian corpus (list sof dataframes)</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -362,7 +337,7 @@ Failed to retrieve files: 401
 Failed to retrieve files: 401</code></pre>
 </div>
 </div>
-<div id="cell-14" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:266}}" data-outputid="f9fa699d-50dd-42f5-f684-846242026cb5" data-execution_count="7">
+<div id="cell-14" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:1153,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1737385521414,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="f9fa699d-50dd-42f5-f684-846242026cb5" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Egyptian metadata</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># metadata = get_metadata_from_raw_private_github("https://raw.githubusercontent.com/thesaurus-linguae-aegyptiae/test-rawdata/master/alp-course-2024/TLA_literature/TLA_metadata.csv", tla_access_token)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -382,7 +357,7 @@ Failed to retrieve files: 401</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385860045,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:524,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="ba2bee97-bf42-4bae-fb06-e3f042033eb7" data-execution_count="12">
+<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:524,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385860045,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="ba2bee97-bf42-4bae-fb06-e3f042033eb7" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>corpus[<span class="dv">0</span>].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <div id="df-be683b59-193d-42dd-92c6-93f4cc78eda9" class="colab-df-container">
@@ -723,7 +698,7 @@ Failed to retrieve files: 401</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385864555,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:241,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="3986a404-4028-4574-a6bf-a5628050262a" data-execution_count="13">
+<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:241,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385864555,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="3986a404-4028-4574-a6bf-a5628050262a" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare text_ids (list of unique ids), and metadata</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>text_ids <span class="op">=</span> []</span>
@@ -1303,7 +1278,7 @@ Failed to retrieve files: 401</code></pre>
 <section id="to-convert-dataframe-to-string" class="level3">
 <h3 class="anchored" data-anchor-id="to-convert-dataframe-to-string">To convert dataframe to string</h3>
 <p><strong>Function to split the text dataframes according to a column</strong>. Used to separate text to lines: * param df: dataframe containing one word in each row. * param column: the column by which to split the dfs, perferably <code>text</code> or <code>line</code>. * return: a list of dataframes split according to the value given to the column parameter.</p>
-<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385870170,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:203,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="14">
+<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:203,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385870170,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> split_df_by_column_value(df, column):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    dfs <span class="op">=</span> []</span>
@@ -1313,7 +1288,7 @@ Failed to retrieve files: 401</code></pre>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        dfs.append(split_df)</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dfs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-20" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385872988,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:244,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="4941d099-ad46-4e53-f144-1f4362b3728a" data-execution_count="15">
+<div id="cell-20" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:244,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385872988,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="4941d099-ad46-4e53-f144-1f4362b3728a" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>split_df_by_column_value(corpus[<span class="dv">0</span>].head(), <span class="st">"line"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>[              ref                          inst         frag    norm      cf  \
@@ -1346,7 +1321,7 @@ Failed to retrieve files: 401</code></pre>
 </div>
 </div>
 <p><strong>Function to convert the values from the text dataframe to a string of text with or without line breaks and word segmentation</strong>. * param df: the text dataframe * param column: the chosen column from the dataframe to construct the text from (preferably unicode_word, cf, or lemma) * param break_perc: a parameter which dictates whether to include broken words depending on the percentage of how broken they are. Compares this value to the <code>break_perc</code> column in the dataframe. Parameter is set to 1 (i.e.&nbsp;all words, whether broken or not, are included); can be any float between 0 and 1. * param mask: boolean whether to mask named entities or not; set to True. * return: a string which includes all the words in the texts according to the column chosen. Extra spaces that were between broken words or empty lines are removed.</p>
-<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385878197,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:217,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="16">
+<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:217,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385878197,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> df2str(df, column, break_perc<span class="op">=</span><span class="dv">1</span>, mask<span class="op">=</span><span class="va">True</span>, segmentation<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># check if column exists in dataframe. If not, return empty text.</span></span>
@@ -1394,7 +1369,7 @@ Failed to retrieve files: 401</code></pre>
 <span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (text, text_length_full, text_length_partial)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385882504,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:209,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="f902b177-eb42-4773-90c1-8c33f63998a3" data-execution_count="17">
+<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:209,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385882504,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="f902b177-eb42-4773-90c1-8c33f63998a3" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df2str(corpus[<span class="dv">0</span>], <span class="st">"cf"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>('perʾu Baltil šūquru narāmu UNK DN UNK UNK UNK UNK\npitqu DN ša ana bēlūtu mātu UNK UNK UNK UNK UNK UNK\nrabû ana šarrūtu šakkanakku UNK UNK UNK UNK UNK UNK\nmuṣṣibu šagigurrû ana UNK UNK UNK UNK UNK UNK UNK UNK šurīnu\nzikaru dannu nūru kiššatu nišu etellu UNK kalû malku UNK UNK UNK\ndāʾipu gērû eṭlu qardu sāpinu UNK nakru ša huršānu\netguru kīma qû salātu UNK UNK UNK UNK UNK UNK\n',
@@ -1406,7 +1381,7 @@ Failed to retrieve files: 401</code></pre>
 <section id="to-convert-to-specific-word-levels-and-create-dictionaries" class="level3">
 <h3 class="anchored" data-anchor-id="to-convert-to-specific-word-levels-and-create-dictionaries">To convert to specific word levels and create dictionaries</h3>
 <p><strong>Function to convert the dataframes into strings of lemmatized texts</strong>. * param corpus: a list of dataframes * param break_perc: a parameter which dictates whether to include broken words depending on the percentage of how broken they are. Compares this value to the <code>break_perc</code> column in the dataframe. Parameter is set to 1 (i.e.&nbsp;all words, whether broken or not, are included); can be any float between 0 and 1. * param mask: boolean whether to mask named entities or not; set to True. * return: a dictionary where the keys are the text IDs and the values are the lemmatized texts</p>
-<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385891992,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:237,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="18">
+<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:237,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385891992,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_lemmatized_texts(corpus, break_perc<span class="op">=</span><span class="dv">1</span>, mask<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    texts_dict <span class="op">=</span> {}</span>
@@ -1417,14 +1392,14 @@ Failed to retrieve files: 401</code></pre>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        texts_dict[key] <span class="op">=</span> (text, text_length_full, text_length_partial)</span>
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> texts_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385894401,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:227,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="e434dd03-2047-43a0-80f0-21724dc186a0" data-execution_count="19">
+<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:227,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385894401,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="e434dd03-2047-43a0-80f0-21724dc186a0" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>get_lemmatized_texts((split_df_by_column_value(corpus[<span class="dv">0</span>], <span class="st">"text"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>{'Q003414': ('', 0, 0)}</code></pre>
 </div>
 </div>
 <p><strong>Function to convert the dataframes into strings of normalized texts</strong>. * param corpus: a list of dataframes * param break_perc: a parameter which dictates whether to include broken words depending on the percentage of how broken they are. Compares this value to the <code>break_perc</code> column in the dataframe. Parameter is set to 1 (i.e.&nbsp;all words, whether broken or not, are included); can be any float between 0 and 1. * param mask: boolean whether to mask named entities or not; set to True. * return: a dictionary where the keys are the text IDs and the values are the normalized texts</p>
-<div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385908202,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:389,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="20">
+<div id="cell-29" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:389,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385908202,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_normalized_texts(corpus, break_perc<span class="op">=</span><span class="dv">1</span>, mask<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    texts_dict <span class="op">=</span> {}</span>
@@ -1435,7 +1410,7 @@ Failed to retrieve files: 401</code></pre>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>        texts_dict[key] <span class="op">=</span> (text, text_length_full, text_length_partial)</span>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> texts_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385910671,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:240,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="91608813-d005-43df-93b7-14c0847e135a" data-execution_count="21">
+<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:240,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385910671,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="91608813-d005-43df-93b7-14c0847e135a" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>get_normalized_texts((split_df_by_column_value(corpus[<span class="dv">0</span>], <span class="st">"text"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>{'Q003414': ('perʾi Baltil šūquru narām UNK DN UNK UNK UNK UNK\npitiq DN ša ana bēlūt mātāti UNK UNK UNK UNK UNK UNK\nirbû ana šarrūti šakkanakku UNK UNK UNK UNK UNK UNK\nmuṣṣib šagigurê ana UNK UNK UNK UNK UNK UNK UNK UNK šurinnī\nzikaru dannu nūr kiššat nišīšu etel UNK kal malkī UNK UNK UNK\ndāʾipu gārêšu eṭlu qardu sāpinu UNK nakiri ša hursānī\netgurūti kīma qê usallituma UNK UNK UNK UNK UNK UNK\n',
@@ -1444,7 +1419,7 @@ Failed to retrieve files: 401</code></pre>
 </div>
 </div>
 <p><strong>Function to convert the dataframes into strings of segmented unicode texts</strong>. * param corpus: a list of dataframes * param break_perc: a parameter which dictates whether to include broken words depending on the percentage of how broken they are. Compares this value to the <code>break_perc</code> column in the dataframe. Parameter is set to 1 (i.e.&nbsp;all words, whether broken or not, are included); can be any float between 0 and 1. * param mask: boolean whether to mask named entities or not; set to True. * return: a dictionary where the keys are the text IDs and the values are the segmented unicode texts</p>
-<div id="cell-32" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385919838,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:228,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="22">
+<div id="cell-32" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:228,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385919838,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_segmented_unicode_texts(corpus, break_perc<span class="op">=</span><span class="dv">1</span>, mask<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    texts_dict <span class="op">=</span> {}</span>
@@ -1455,7 +1430,7 @@ Failed to retrieve files: 401</code></pre>
 <span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>        texts_dict[key] <span class="op">=</span> (text, text_length_full, text_length_partial)</span>
 <span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> texts_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-33" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385921874,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:220,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="5d2b7373-ffe3-495e-c6d8-b54c95131def" data-execution_count="23">
+<div id="cell-33" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:220,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385921874,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="5d2b7373-ffe3-495e-c6d8-b54c95131def" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>get_segmented_unicode_texts((split_df_by_column_value(corpus[<span class="dv">0</span>], <span class="st">"text"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <pre><code>{'Q003414': ('𒉭 𒁄𒌀𒆠 𒋗𒄣𒊒 𒈾𒉘 𒀭X DN 𒀊 𒁀 X X\n𒉿𒄘 DN 𒃻 𒀀𒈾 𒁁𒂁 𒆳𒆳 X 𒀭 𒋾 𒀠 𒋃 X\n𒅕𒁍𒌑 𒀀𒈾 𒈗𒌑𒋾 𒄊𒀴 X X X X X 𒈠\n𒈬𒍦 𒊮𒅆𒃸𒎌 𒀀𒈾 X X X X X X X X 𒋗𒊑𒅔𒉌\n𒍣𒅗𒊒 𒆗𒉡 𒉡𒌨 𒆧𒆳 𒌦𒎌𒋗 𒂊𒌀 X 𒆗 𒂷𒆠 X X 𒋾\n𒁕𒄿𒁍 𒂵𒊑𒂊𒋗 𒄨 𒃼𒁺 𒊓𒉿𒉡 X 𒈾𒆠𒊑 𒃻 𒄯𒊓𒀀𒉌\n𒀉𒄖𒊒𒋾 𒆠𒈠 𒆠𒂊 𒌑𒊩𒇷𒌅𒈠 𒌑X 𒌑 X X X X\n',
@@ -1472,7 +1447,7 @@ Failed to retrieve files: 401</code></pre>
 <p>Full documentation of the variables of TfidfVectorizer from sklearn, see: https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer * param corpus: a dataframe in which the texts are in a <code>"text"</code> column and the dataframe’s index is the text ids. * param analyzer: whether the feature should be made of word or character n-grams. use <code>"word"</code> for word features, <code>"char_wb"</code> for character n-grams within word boundaries, or <code>"char"</code> for character n-grams without word boundaries. * param ngram_range: the lower and upper boundary of the range of n-values for different n-grams to be extracted. * param max_df: threshold to ignore terms that have a document frequency above a certain value. If the threshold is a float, it represent a proportion of the documents. If the threshold is an integer, it represents absolute counts of number of documents in which the terms appears. * param min_df: threshold to ignore terms that have a document frequency below a certain value. If the threshold is a float, it represent a proportion of the documents. If the threshold is an integer, it represents absolute counts of number of documents in which the terms appears. * param max_features: if not <code>None</code>, build a vocabulary that only considers the top max_features ordered by term frequency across the corpus. * param stop_words: if <code>None</code>, no stop words are used. Otherwise, can be a list with words to be removed from resulting tokens. * return: <code>counts</code> the raw counts of the vectorizer, <code>counts_df</code> a dataframe of the counts where the index is the text ids and the columns are the tokens, <code>stop_words</code> an updated list of stop words</p>
 <p><img src="https://www.humanitiesdataanalysis.org/_images/bow.png" class="img-fluid"></p>
 <p><strong>Figure 1</strong>. Example of a document-term matrix extracted from a corpus, see Fig. 3 in Karsdorp, F., Kestemont, M., &amp; Riddell, A. (2021). Humanities Data Analysis: Case Studies with Python. Princeton University Press.</p>
-<div id="cell-39" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385929859,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:212,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="24">
+<div id="cell-39" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:212,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385929859,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> vectorize(corpus, analyzer<span class="op">=</span><span class="st">"word"</span>, ngram_range<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), max_df<span class="op">=</span><span class="fl">1.0</span>, min_df<span class="op">=</span><span class="dv">1</span>, max_features<span class="op">=</span><span class="va">None</span>, stop_words<span class="op">=</span>[<span class="st">"UNK"</span>, <span class="st">"X"</span>]):</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    vectorizer <span class="op">=</span> TfidfVectorizer(<span class="bu">input</span><span class="op">=</span><span class="st">"content"</span>, lowercase<span class="op">=</span><span class="va">False</span>, analyzer<span class="op">=</span>analyzer,</span>
@@ -1503,7 +1478,7 @@ Failed to retrieve files: 401</code></pre>
 <section id="calculating-distances-between-vectorized-documents" class="level4">
 <h4 class="anchored" data-anchor-id="calculating-distances-between-vectorized-documents">calculating distances between vectorized documents</h4>
 <p><strong>Converts a term-document matrix to a text similarity matrix</strong>. * param counts: the raw counts from the <code>vectorize</code> function. * param metric: the metric by which to calculate the distances between the texts in the corpus. For one place to look into the different types of matrics see “Computing distances between documents” in <a href="https://www.humanitiesdataanalysis.org/vector-space-model/notebook.html#computing-distances-between-documents">Karsdrop, Kestemont, &amp; Riddell 2021</a> Valid metrics are: ‘braycurtis’, ‘canberra’, ‘chebyshev’, ‘cityblock’, ‘correlation’, ‘cosine’, ‘dice’, ‘euclidean’, ‘hamming’, ‘jaccard’, ‘jensenshannon’, ‘kulczynski1’, ‘mahalanobis’, ‘matching’, ‘minkowski’, ‘rogerstanimoto’, ‘russellrao’, ‘seuclidean’, ‘sokalmichener’, ‘sokalsneath’, ‘sqeuclidean’, ‘yule’. * param text_ids: list of unique text_ids. * return: a dataframe matrix of distance between texts.</p>
-<div id="cell-42" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385934962,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:202,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="25">
+<div id="cell-42" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:202,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385934962,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> distance_calculator(counts, metric, text_ids):</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame(squareform(pdist(counts, metric<span class="op">=</span>metric)), index<span class="op">=</span>text_ids, columns<span class="op">=</span>text_ids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1512,7 +1487,7 @@ Failed to retrieve files: 401</code></pre>
 <section id="reducing-dimensions-with-pca-or-tsne" class="level4">
 <h4 class="anchored" data-anchor-id="reducing-dimensions-with-pca-or-tsne">reducing dimensions with pca or tsne</h4>
 <p><strong>Reduces multidimensional data into two dimensions using PCA</strong>. * param df: dataframe holding the dimensions to reduce. All columns should include numerical values only. The dataframe’s index should hold the unique text ids. * param metadata: the rest of the metadata in the corpus, to help visualize the resulting clusters in meaningful ways. The metadata’s index should hold the unique text ids. * return: a dataframe with the coordinates of the two remaining dimensions on all other columns from the metadata.</p>
-<div id="cell-45" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385939211,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:211,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="26">
+<div id="cell-45" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:211,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385939211,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reduce_dimensions_pca(df, metadata):</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
@@ -1523,7 +1498,7 @@ Failed to retrieve files: 401</code></pre>
 </div>
 <p><strong>Reduces multidimensional data into two dimensions using TSNE</strong>.</p>
 <p>See full documentation of sklearn’s TSNE on: https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html * param df: dataframe holding the dimensions to reduce. All columns should include numerical values only. The dataframe’s index should hold the unique text ids. * param perplexity: perplexity is a measure the weighs the importance of nearby versus distant points when creating a lower-dimension mapping. t-SNE first converts the distances between points into conditional probabilities that represent similarities, using Gaussian probability distributions. The perplexity parameter influences the variance used to compute these probabilities. A higher perplexity leads to a broader Gaussian that considers a larger number of neighbors when assessing similarity. Lower perplexity puts more focus on the local structure and considers fewer neighbors. A good perplexity depends greatly on dataset size and density. The documentation recommends a value between 5 and 50. We recommend to start with the square root of the length of the corpus. * param n_iter: maximum number of iterations for optimization. * param metric: the metric to be used when calculating distances between vectors. Valid metrics are: ‘braycurtis’, ‘canberra’, ‘chebyshev’, ‘cityblock’, ‘correlation’, ‘cosine’, ‘dice’, ‘euclidean’, ‘hamming’, ‘jaccard’, ‘jensenshannon’, ‘kulczynski1’, ‘mahalanobis’, ‘matching’, ‘minkowski’, ‘rogerstanimoto’, ‘russellrao’, ‘seuclidean’, ‘sokalmichener’, ‘sokalsneath’, ‘sqeuclidean’, ‘yule’. * param metadata: the rest of the metadata in the corpus, to help visualize the resulting clusters in meaningful ways. The metadata’s index should hold the unique text ids. * return: a dataframe with the coordinates of the two remaining dimensions on all other columns from the metadata.</p>
-<div id="cell-47" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385945393,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:223,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="27">
+<div id="cell-47" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:223,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385945393,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reduce_dimensions_tsne(df, perplexity, n_iter, metric, metadata):</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    tsne <span class="op">=</span> TSNE(n_components<span class="op">=</span><span class="dv">2</span>, perplexity<span class="op">=</span>perplexity, n_iter<span class="op">=</span>n_iter, metric<span class="op">=</span>metric, init<span class="op">=</span><span class="st">"pca"</span>)</span>
@@ -1537,7 +1512,7 @@ Failed to retrieve files: 401</code></pre>
 </section>
 <section id="process-texts-from-dataframes-and-combine-results-with-metadata-dataframe" class="level2">
 <h2 class="anchored" data-anchor-id="process-texts-from-dataframes-and-combine-results-with-metadata-dataframe">Process texts from dataframes and combine results with metadata dataframe</h2>
-<div id="cell-49" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385949628,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:226,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-execution_count="28">
+<div id="cell-49" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:226,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737385949628,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to combine processed texts with metadata</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_corpus_metadata(texts_dict, metadata):</span>
@@ -1545,7 +1520,7 @@ Failed to retrieve files: 401</code></pre>
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> metadata.join(texts_df)</span>
 <span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-50" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737386213592,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:16204,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="e173e0a1-a2df-483e-ce09-4309814181d2" data-execution_count="32">
+<div id="cell-50" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:16204,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737386213592,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="e173e0a1-a2df-483e-ce09-4309814181d2" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">## vectorize lemma forms</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>corpus_dict <span class="op">=</span> get_lemmatized_texts(corpus, break_perc<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co">## vectorize normalized forms</span></span>
@@ -1573,7 +1548,7 @@ Failed to retrieve files: 401</code></pre>
 Number of texts after filtering: 308</code></pre>
 </div>
 </div>
-<div id="cell-51" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737386217542,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:271,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="387010bf-f587-421c-8d39-272c51ccc8a7" data-execution_count="33">
+<div id="cell-51" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:271,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1737386217542,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="387010bf-f587-421c-8d39-272c51ccc8a7" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>corpus_metadata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
 <div id="df-9bf59613-3ceb-44c2-8322-b4ae631f40e2" class="colab-df-container">
@@ -2139,7 +2114,7 @@ Number of texts after filtering: 308</code></pre>
 </section>
 <section id="exploring-the-akkadian-rinap-or-egyptian-tla-corpus-using-the-vector-space-model" class="level1">
 <h1>Exploring the Akkadian RINAP or Egyptian TLA Corpus using the Vector Space Model</h1>
-<div id="cell-53" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:284}}" data-outputid="785fe316-cf01-43a7-ad3d-d5867f82b6eb" data-execution_count="34">
+<div id="cell-53" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:231,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1737386223244,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="785fe316-cf01-43a7-ad3d-d5867f82b6eb" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vectorize corpus</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>counts, counts_df, stop_words <span class="op">=</span> vectorize(corpus_metadata, max_features<span class="op">=</span><span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
@@ -2161,7 +2136,7 @@ Number of texts after filtering: 308</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-54" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1737386258681,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:264,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}" data-outputid="cef15bc2-86e2-4308-f645-1749a32dcf0d" data-execution_count="35">
+<div id="cell-54" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:264,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1737386258681,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}" data-outputid="cef15bc2-86e2-4308-f645-1749a32dcf0d" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>counts_df.head(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
@@ -2174,12 +2149,12 @@ Number of texts after filtering: 308</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-55" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521418,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:13266,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}">
+<div id="cell-55" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:13266,&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521418,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate distance between vectorized texts</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> distance_calculator(counts, <span class="st">"cosine"</span>, corpus_metadata.index)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-56" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521418,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:13265,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}">
+<div id="cell-56" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:13265,&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521418,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># visualize matrix</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.imshow(matrix)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2191,11 +2166,11 @@ Number of texts after filtering: 308</code></pre>
 <span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-57" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521418,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:13264,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}">
+<div id="cell-57" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:13264,&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521418,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reduce matrix dimensions</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>reduced_tsne <span class="op">=</span> reduce_dimensions_tsne(matrix, perplexity<span class="op">=</span>matrix.shape[<span class="dv">0</span>]<span class="op">**</span><span class="fl">0.5</span>, n_iter<span class="op">=</span><span class="dv">5000</span>, metric<span class="op">=</span><span class="st">"euclidean"</span>, metadata<span class="op">=</span>corpus_metadata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-58" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521418,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:13262,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}">
+<div id="cell-58" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:13262,&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521418,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># visualize reduced dimensions</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co"># adjust size column for visualization</span></span>
@@ -2214,14 +2189,14 @@ Number of texts after filtering: 308</code></pre>
 <section id="find-shared-tokens" class="level1">
 <h1>Find Shared Tokens</h1>
 <p><strong>creates a mini df that includes only the chosen text and the shared tokens in those texts</strong> (i.e., all tokens that are none zero in all texts). * param df: the counts_df where the index is the text ids and the columns are the tokens. * param text_ids: a list containing text ids. * return: a dataframe where the index are the shared tokens and the columns are the texts. the values are the tf-idf scores.</p>
-<div id="cell-61" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521419,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:13262,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}">
+<div id="cell-61" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:13262,&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521419,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_shared_tokens(df, text_ids):</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  mini_df <span class="op">=</span> df[df.index.isin(text_ids)].copy()</span>
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  mini_df <span class="op">=</span> mini_df.loc[:, (mini_df <span class="op">!=</span> <span class="dv">0</span>).<span class="bu">all</span>(axis<span class="op">=</span><span class="dv">0</span>)].copy()</span>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> mini_df.transpose()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-62" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521419,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:13261,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}">
+<div id="cell-62" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:13261,&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521419,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Akkadian</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>shared_tokens <span class="op">=</span> find_shared_tokens(counts_df, [<span class="st">"Q003450"</span>, <span class="st">"Q003711"</span>, <span class="st">"Q003790"</span>])</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Egyptian</span></span>
@@ -2229,7 +2204,7 @@ Number of texts after filtering: 308</code></pre>
 <span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>shared_tokens</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-63" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521419,&quot;user_tz&quot;:-120,&quot;elapsed&quot;:13260,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;}}}">
+<div id="cell-63" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;executionInfo&quot;,&quot;value&quot;:{&quot;elapsed&quot;:13260,&quot;status&quot;:&quot;aborted&quot;,&quot;timestamp&quot;:1737385521419,&quot;user&quot;:{&quot;displayName&quot;:&quot;shai gordin&quot;,&quot;userId&quot;:&quot;12645290687300756012&quot;},&quot;user_tz&quot;:-120}}">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>px.scatter(shared_tokens)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><em>This notebook was created by <a href="https://github.com/ARomach">Avital Romach</a>, with additional code and text by <a href="https://www.geschkult.fu-berlin.de/e/aegyptologie/personen/Professorinnen-und-Professoren/Lincke/index.html">Eliese-Sophia Lincke</a>, <a href="https://digitalpasts.github.io/">Shai Gordin</a> and <a href="https://www.bbaw.de/die-akademie/mitarbeiterinnen-mitarbeiter/werning-daniel">Daniel A. Werning</a> in Spring 2024 for the course <a href="https://digitalpasts.github.io/ALP-course/">Ancient Language Processing</a>. Code can be reused under a <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></em></p>

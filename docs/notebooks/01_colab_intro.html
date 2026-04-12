@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Google Colab (and some other tips and tricks) – Ancient Language Processing 2026 / Gordin and Lincke</title>
+<title>colab_intro – Ancient Language Processing / Gordin and Lincke</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,9 +108,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Intro to Google Colab (and some other tips and tricks) – Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:title" content="Ancient Language Processing / Gordin and Lincke">
 <meta property="og:description" content="">
-<meta property="og:site_name" content="Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:site_name" content="Ancient Language Processing / Gordin and Lincke">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -124,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <img src="../digpasts_logo.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Ancient Language Processing 2026 / Gordin and Lincke</span>
+    <span class="navbar-title">Ancient Language Processing / Gordin and Lincke</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -141,29 +141,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../coursework.html"> 
 <span class="menu-text">Coursework</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code-notebooks" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Code Notebooks</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-code-notebooks">    
-        <li>
-    <a class="dropdown-item" href="../notebooks/index.html">
- <span class="dropdown-text">Notebooks</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/index.html"> 
+<span class="menu-text">Code Notebooks</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/01_colab_intro.html">
- <span class="dropdown-text">Colab Intro</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/02_Python_Brush_up.html">
- <span class="dropdown-text">Python Brush up</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/03_VectorizingTexts.html">
- <span class="dropdown-text">Vectorizing Texts</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Materials and Texts</span></a>
@@ -189,7 +170,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lets-get-started" id="toc-lets-get-started" class="nav-link active" data-scroll-target="#lets-get-started">Let’s get started!</a></li>
+  <li><a href="#intro-to-google-colab-and-some-other-tips-and-tricks" id="toc-intro-to-google-colab-and-some-other-tips-and-tricks" class="nav-link active" data-scroll-target="#intro-to-google-colab-and-some-other-tips-and-tricks">Intro to Google Colab (and some other tips and tricks)</a>
+  <ul class="collapse">
+  <li><a href="#lets-get-started" id="toc-lets-get-started" class="nav-link" data-scroll-target="#lets-get-started">Let’s get started!</a></li>
   <li><a href="#and-off-we-go" id="toc-and-off-we-go" class="nav-link" data-scroll-target="#and-off-we-go">And off we go!</a></li>
   <li><a href="#your-first-cell" id="toc-your-first-cell" class="nav-link" data-scroll-target="#your-first-cell">Your first cell</a></li>
   <li><a href="#exercise-make-a-text-cell-with-some-formatting-using-markdown" id="toc-exercise-make-a-text-cell-with-some-formatting-using-markdown" class="nav-link" data-scroll-target="#exercise-make-a-text-cell-with-some-formatting-using-markdown">Exercise: Make a text cell with some formatting using Markdown</a></li>
@@ -204,31 +187,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#keyboard-shortcuts" id="toc-keyboard-shortcuts" class="nav-link" data-scroll-target="#keyboard-shortcuts">Keyboard shortcuts</a></li>
   <li><a href="#saving-submitting-your-work" id="toc-saving-submitting-your-work" class="nav-link" data-scroll-target="#saving-submitting-your-work">Saving / submitting your work</a></li>
   <li><a href="#viewing-editing-notebooks-outside-of-colab" id="toc-viewing-editing-notebooks-outside-of-colab" class="nav-link" data-scroll-target="#viewing-editing-notebooks-outside-of-colab">Viewing / editing notebooks outside of Colab</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Intro to Google Colab (and some other tips and tricks)</h1>
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/DigitalPasts/alpcourse/blob/main/notebooks/01_colab_intro.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="intro-to-google-colab-and-some-other-tips-and-tricks" class="level1">
+<h1>Intro to Google Colab (and some other tips and tricks)</h1>
 <p>Google Colab is a cloud-based notebook-style platform for programming in Python (among other languages), which allows you to intersperse executable code with chunks of text like this. It lets you (mostly) avoid the command line, and results in a file that is easy to read and easy to share with others.</p>
 <p>We’ll be using Colab for in-class exercises and for many of the homework assignments.</p>
 <section id="lets-get-started" class="level2">
@@ -372,6 +348,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><em>This notebook was created by Lauren Klein in Fall 2019, incorporating materials from <a href="https://github.com/aparrish/dmep-python-intro">Alison Parish</a> and <a href="https://github.com/emory-courses/data-science">Jinho Choi</a>. It was updated in Fall 2021, Spring 2021, and Fall 2022.</em></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

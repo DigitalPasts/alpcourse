@@ -8,6 +8,10 @@ title: "Assignments and Active Participation"
 
 3.  Students will develop their own projects based on data provided by the instructors or by data that they contribute. The project plan requires (a) a humanistic research question, (b) operationalize it (i.e., develop a workflow to tackle the question computationally) and (c) present a poster describing their data set, methods, analysis, interpretation and results. The structure of the poster will follow a template of a typical computational humanities paper. (c. 120 hours = 4 credit points)
 
+    **Term paper preparation begins by registering your project in the shared Google Sheet:**\
+    <https://docs.google.com/spreadsheets/d/13FUZxMIrCQ9jIqh0fS70oWzwdiH4bo2FLxjW7UZeqSo/edit?usp=sharing>\
+    Fill in your name, institution, proposed dataset, and research question. This will be updated throughout the semester as your project develops.
+
 4.  ACL (2023) Term Paper Template. *Computational Humanities article style*. <https://2023.aclweb.org/calls/style_and_formatting/>
 
 ## Assessment

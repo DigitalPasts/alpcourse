@@ -23,8 +23,7 @@ For beginners, the easiest method is to open notebooks in **Google Colab** (runs
 ## How to run a notebook from GitHub (recommended)
 
 1. Open one notebook link above.
-2. On the GitHub page, click **Open in Colab**.  
-	(If you do not see this button, copy the GitHub URL and open: <https://colab.research.google.com/> → **GitHub** tab → paste URL.)
+2. On the notebook’s GitHub page, look near the top for **Open in Colab** and click it. If it is not visible, copy the page URL, go to <https://colab.research.google.com/>, open the **GitHub** tab, paste the URL, and select the notebook.
 3. In Colab, click **Copy to Drive** so you can edit your own copy.
 4. Run cells top-to-bottom with **Shift+Enter**.
 5. If asked, click **Connect** (top-right) to start the runtime.

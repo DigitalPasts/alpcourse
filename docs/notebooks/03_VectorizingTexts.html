@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>vectorizingtexts – Ancient Language Processing 2026 / Gordin and Lincke</title>
+<title>vectorizingtexts – Ancient Language Processing / Gordin and Lincke</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -137,9 +137,9 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:title" content="Ancient Language Processing / Gordin and Lincke">
 <meta property="og:description" content="">
-<meta property="og:site_name" content="Ancient Language Processing 2026 / Gordin and Lincke">
+<meta property="og:site_name" content="Ancient Language Processing / Gordin and Lincke">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -153,7 +153,7 @@ window.Quarto = {
     <img src="../digpasts_logo.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Ancient Language Processing 2026 / Gordin and Lincke</span>
+    <span class="navbar-title">Ancient Language Processing / Gordin and Lincke</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -170,29 +170,10 @@ window.Quarto = {
     <a class="nav-link" href="../coursework.html"> 
 <span class="menu-text">Coursework</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code-notebooks" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Code Notebooks</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-code-notebooks">    
-        <li>
-    <a class="dropdown-item" href="../notebooks/index.html">
- <span class="dropdown-text">Notebooks</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/index.html"> 
+<span class="menu-text">Code Notebooks</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/01_colab_intro.html">
- <span class="dropdown-text">Colab Intro</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/02_Python_Brush_up.html">
- <span class="dropdown-text">Python Brush up</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notebooks/03_VectorizingTexts.html">
- <span class="dropdown-text">Vectorizing Texts</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Materials and Texts</span></a>
@@ -236,6 +217,12 @@ window.Quarto = {
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/DigitalPasts/alpcourse/blob/main/notebooks/03_VectorizingTexts.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
+</div>
 <section id="exploring-texts-using-the-vector-space-model" class="level1">
 <h1>Exploring Texts using the Vector Space Model</h1>
 <p><strong>Text and code copied from:</strong><br> <a href="https://www.humanitiesdataanalysis.org/vector-space-model/notebook.html">Karsdorp, F., Kestemont, M., &amp; Riddell, A. (2021). <em>Humanities Data Analysis: Case Studies with Python</em>, Princeton University Press.</a><br> Adapted by Eliese-Sophia Lincke &amp; Shai Gordin for the purposes of the course <a href="https://digitalpasts.github.io/ALP-course/">Ancient Language Processing</a> (summer term 2024)</p>
@@ -243,7 +230,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="from-texts-to-vectors-tf-idf">From Texts to Vectors: TF-IDF</h2>
 <p>When using the <span class="index">vector space model</span>, a <span class="index">corpus</span>—a collection of documents, each represented as a bag of words—is typically represented as a matrix, in which each row represents a document from the collection, each column represents a word from the collection’s <span class="index">vocabulary</span>, and each cell represents the frequency with which a particular word occurs in a document.</p>
 <p>A matrix arranged in this way is often called a <em>document-term matrix</em>—or <em>term-document matrix</em> where: * rows are associated with documents * word counts are in the columns.</p>
-<p>```jifuaxd Example of a vector space representation with four documents (rows) and a vocabulary of four words (columns). For each document the table lists how often each vocabulary item occurs.</p>
+<p>```yczcogx Example of a vector space representation with four documents (rows) and a vocabulary of four words (columns). For each document the table lists how often each vocabulary item occurs.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">

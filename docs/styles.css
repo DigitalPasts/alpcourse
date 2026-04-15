@@ -1,5 +1,22 @@
 /* css styles */
 
+/* Slides button in schedule table */
+.slides-btn {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #4285F4;
+  color: white !important;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+.slides-btn:hover {
+  background-color: #2a6dd9;
+  text-decoration: none !important;
+}
+
 body {
   /*direction: rtl;
   text-align: right;*/

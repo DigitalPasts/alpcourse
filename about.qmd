@@ -18,15 +18,24 @@ def md_to_html(text):
     # convert markdown to HTML (extensions=['extra'] supports lists/tables)
     return markdown.markdown(str(text), extensions=['extra'])
 
+def slides_to_button(url):
+    if pd.isna(url) or str(url).strip() == '':
+        return ''
+    return f'<a href="{url}" target="_blank" class="slides-btn">&#x1F4CA; Slides</a>'
+
 # Convert Markdown in these columns to HTML so the HTML is rendered in Quarto
 for col in ['Assignment', 'Required Reading', 'Materials']:
     if col in df.columns:
         df[col] = df[col].fillna('').apply(md_to_html)
 
+# Render Slides column as styled buttons
+if 'Slides' in df.columns:
+    df['Slides'] = df['Slides'].fillna('').apply(slides_to_button)
+
 # Render one table per Unit
 for unit in df['Unit'].unique():
     display(HTML(f"<h2>{unit}</h2>"))
-    sub = df[df['Unit'] == unit][['Date','Topic','Assignment','Required Reading','Materials']]
+    sub = df[df['Unit'] == unit][['Date','Topic','Slides','Assignment','Required Reading','Materials']]
     html = sub.to_html(index=False, escape=False, classes='schedule-table')
     display(HTML(html))
 ```
